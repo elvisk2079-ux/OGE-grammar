@@ -1,0 +1,538 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Conditionals 0, 1, 2 — ОГЭ грамматика</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@700;800;900&family=PT+Sans+Narrow:wght@400;700&display=swap">
+<style>
+/* Layout: brand "mind map" sheet — green plaques, numbered circles, leaf sprigs; one exercise set per view */
+:root{
+  --paper:#f6faf1; --card:#ffffff; --ink:#1c3520; --muted:#5b7360;
+  --green:#2f7d32; --deep:#1e5a26; --plaque:#e3f0d6; --line:#bcd9a9; --butter:#fbf0c4;
+  --ok:#2e7d32; --ok-bg:#dcefd4; --bad:#b3261e; --bad-bg:#fbe2df; --soft:#8a5a00; --soft-bg:#fff1c7;
+  --leaf1:#5aa340; --leaf2:#86c25a; --stem:#6b8f3a;
+  --display:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --body:"PT Sans Narrow","Arial Narrow","Roboto Condensed",sans-serif;
+  --hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#132016; --card:#1a2a1d; --ink:#e4efe0; --muted:#9bb39f;
+  --green:#7cc47f; --deep:#a6dca5; --plaque:#223826; --line:#36573c; --butter:#3a3520;
+  --ok:#8fd68f; --ok-bg:#1f3a22; --bad:#ff8a80; --bad-bg:#3d1f1d; --soft:#f2c35b; --soft-bg:#3a3018;
+  --leaf1:#4f8f3a; --leaf2:#6fae4e; --stem:#5d7f34; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#132016; --card:#1a2a1d; --ink:#e4efe0; --muted:#9bb39f;
+  --green:#7cc47f; --deep:#a6dca5; --plaque:#223826; --line:#36573c; --butter:#3a3520;
+  --ok:#8fd68f; --ok-bg:#1f3a22; --bad:#ff8a80; --bad-bg:#3d1f1d; --soft:#f2c35b; --soft-bg:#3a3018;
+  --leaf1:#4f8f3a; --leaf2:#6fae4e; --stem:#5d7f34; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.hero{display:flex;align-items:center;justify-content:center;gap:12px;text-align:center}
+.hero h1{font-size:clamp(34px,7vw,56px);font-weight:900;color:var(--deep);letter-spacing:-.5px;line-height:1}
+.hero .sub{color:var(--muted);font-size:17px;margin-top:6px}
+.sprig{width:64px;height:auto;flex:none}
+.sprig.r{transform:scaleX(-1)}
+nav.tabs{display:flex;gap:8px;overflow-x:auto;padding:16px 2px 10px;scrollbar-width:thin}
+nav.tabs button{flex:none;font:inherit;font-size:16px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 6px;display:flex;align-items:center;gap:8px;cursor:pointer}
+nav.tabs button .num{width:28px;height:28px;border-radius:50%;background:var(--plaque);color:var(--deep);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:15px}
+nav.tabs button[aria-current="true"]{border-color:var(--green);background:var(--plaque)}
+nav.tabs button[aria-current="true"] .num{background:var(--green);color:var(--card)}
+nav.tabs button .sc{font-size:14px;color:var(--ok);font-weight:700}
+nav.tabs button:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.sheet{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:22px clamp(14px,3vw,30px) 26px;position:relative}
+.phead{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.circle{width:52px;height:52px;border-radius:50%;background:var(--green);color:var(--card);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:26px;flex:none}
+.phead h2{font-size:clamp(24px,4.4vw,34px);color:var(--deep);font-weight:900;line-height:1.1}
+.phead .ru{color:var(--muted);font-size:18px}
+.tip{background:var(--butter);border-radius:14px;padding:12px 16px;margin:14px 0 6px}
+.tip .lab{font-family:var(--hand);font-size:26px;color:var(--deep);line-height:1}
+.tip ul{margin:4px 0 0;padding-left:20px}
+.tip li{margin:2px 0}
+.part{margin-top:24px}
+.plab{display:flex;align-items:flex-start;gap:10px}
+.pl{width:34px;height:34px;border-radius:50%;background:var(--plaque);color:var(--deep);border:2px solid var(--green);display:grid;place-items:center;font-family:var(--display);font-weight:900;flex:none}
+.instr b{display:block;font-weight:700}
+.instr i{color:var(--muted);font-size:16px}
+ol.items{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+ol.items>li{display:flex;gap:10px;align-items:baseline;background:var(--paper);border-radius:12px;padding:8px 12px;min-width:0}
+ol.items>li .n{font-family:var(--display);font-weight:800;color:var(--green);min-width:1.6em;flex:none}
+ol.items>li .c{min-width:0;flex:1}
+ol.grid4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:640px){ol.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+input.gap{font:inherit;color:var(--ink);background:var(--card);border:none;border-bottom:2px solid var(--green);border-radius:6px 6px 0 0;padding:1px 6px;margin:2px 2px;max-width:100%}
+select.gap{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:8px;padding:1px 4px;margin:2px}
+.chp{font-weight:700;color:#1e5a26;white-space:nowrap}
+input.full{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:6px 10px;width:100%;margin-top:6px}
+.hint{color:var(--muted);font-size:16px;white-space:nowrap}
+.cue{color:var(--green);font-weight:700}
+.ok{background:var(--ok-bg)!important;border-color:var(--ok)!important;color:var(--ok)!important}
+.bad{background:var(--bad-bg)!important;border-color:var(--bad)!important;color:var(--bad)!important}
+.soft{background:var(--soft-bg)!important;border-color:var(--soft)!important}
+.model{font-size:16px;color:var(--soft);margin-top:4px}
+.model.okm{color:var(--ok)}
+.bank{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.bank span{background:var(--plaque);border-radius:999px;padding:2px 12px;font-size:17px}
+.tok{font:inherit;color:var(--ink);background:none;border:none;border-radius:6px;padding:1px 3px;margin:0 -1px;cursor:pointer}
+.tok:hover{background:var(--plaque)}
+.tok.sel{background:var(--butter);outline:2px solid var(--soft)}
+.erow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.small{font:inherit;font-size:15px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:2px 12px;cursor:pointer}
+.small.on{background:var(--plaque);border-color:var(--green)}
+.scale{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:12px}
+.scale .slot{display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--paper);border-radius:12px;padding:8px 4px}
+.scale .pct{font-family:var(--display);font-weight:800;color:var(--green);font-size:15px}
+.scale select{font:inherit;font-size:15px;width:100%;border:2px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);padding:3px}
+.bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--green),var(--line));margin-top:8px}
+@media (max-width:640px){.scale{grid-template-columns:repeat(2,minmax(0,1fr))}.bar{display:none}}
+.profile{display:flex;gap:16px;background:var(--plaque);border-radius:16px;padding:14px 16px;margin-top:12px}
+.profile .ava{width:64px;height:64px;border-radius:50%;background:var(--card);border:3px solid var(--green);display:grid;place-items:center;font-family:var(--display);font-weight:900;color:var(--deep);font-size:24px;flex:none}
+.profile h3{color:var(--deep);font-size:22px}
+.profile ul{margin:4px 0 0;padding-left:18px}
+.oge{margin-top:12px;border:2px solid var(--line);border-radius:14px;overflow:hidden}
+.oge .row{display:grid;grid-template-columns:minmax(0,1fr) 9.5em;border-top:1px solid var(--line);align-items:baseline}
+.oge .row:first-child{border-top:none}
+.oge .row>*{padding:8px 10px}
+.oge .on{font-family:var(--display);font-weight:800;color:var(--green)}
+.oge .w{font-family:var(--display);font-weight:800;color:var(--deep);background:var(--plaque);align-self:stretch;letter-spacing:.5px;font-size:15px;display:flex;align-items:center}
+.survey{list-style:disc;margin:8px 0 0 24px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:26px}
+.btn{font:inherit;font-family:var(--display);font-weight:800;font-size:17px;border-radius:999px;padding:9px 20px;border:2px solid var(--green);cursor:pointer;background:var(--card);color:var(--deep)}
+.btn.main{background:var(--green);color:var(--card)}
+.score{font-family:var(--display);font-weight:900;font-size:20px;color:var(--deep);margin-left:auto}
+.foot{text-align:center;color:var(--muted);font-size:15px;margin-top:22px}
+@media (prefers-reduced-motion:no-preference){.btn,.small,nav.tabs button{transition:background .15s,border-color .15s}}
+
+/* ---------- PRINT MODE ---------- */
+body.print{font-size:10.8pt;background:#fff;color:#1c3520}
+body.print .wrap{max-width:none;padding:0}
+.ps{width:210mm;height:297mm;overflow:hidden;padding:9mm 12mm 13mm;position:relative;break-after:page;display:flex;flex-direction:column}
+.ps:last-child{break-after:auto}
+.ps .top{display:flex;justify-content:space-between;align-items:flex-end;font-size:10pt;color:#5b7360;border-bottom:1.5px solid #bcd9a9;padding-bottom:3px}
+.ps .top b{font-family:var(--display);color:#1e5a26;font-size:11pt}
+.ps .phead{margin-top:3mm}
+.ps .circle{width:13mm;height:13mm;font-size:19pt}
+.ps .phead h2{font-size:21pt}
+.ps .phead .ru{font-size:12pt}
+.ps .sprig{position:absolute;top:13mm;right:12mm;width:22mm}
+.ps .tip{padding:2.4mm 4mm;margin:3mm 0 0;font-size:10.6pt}
+.ps .tip .lab{font-size:17pt}
+.ps .part{margin-top:3.4mm}
+.ps .pl{width:8mm;height:8mm;font-size:11pt}
+.ps .instr i{font-size:9.5pt}
+.ps ol.items{gap:1.8mm;margin-top:2.6mm}
+.ps ol.items>li{padding:1.4mm 3mm;border-radius:2.5mm}
+.blank{display:inline-block;border-bottom:1.3px solid #1c3520;margin:0 2px;height:1.05em;vertical-align:baseline}
+.wline{border-bottom:1.1px solid #8fb07a;height:8.4mm}
+.ps .hint{font-size:10pt}
+.ps .scale .slot{padding:2mm 1mm}
+.ps .scale .box{height:7mm;width:100%;border-bottom:1.3px solid #1c3520}
+.ps .oge .row>*{padding:1.9mm 3mm}
+.ps .oge .row{grid-template-columns:minmax(0,1fr) 40mm}
+.ps table.sv{width:100%;border-collapse:collapse;margin-top:2.5mm;font-size:10.6pt}
+.ps table.sv td,.ps table.sv th{border:1px solid #bcd9a9;padding:1.5mm 3mm;text-align:left}
+.ps table.sv th{background:#e3f0d6;font-family:var(--display)}
+.ps .pfoot{position:absolute;left:12mm;right:12mm;bottom:6mm;display:flex;justify-content:space-between;font-size:9pt;color:#5b7360}
+.ps .profile{padding:3mm 4mm;margin-top:3mm;font-size:10.6pt}
+.ps .profile .ava{width:14mm;height:14mm;font-size:15pt}
+.ps .profile ul{columns:2;column-gap:6mm}
+
+.keys .kp{break-inside:avoid;margin-bottom:3.5mm}
+.keys h4{font-family:var(--display);color:#1e5a26;font-size:11pt;margin:0 0 1mm}
+.keys ol{margin:0;padding-left:6mm}
+.keys .kl{font-weight:700;color:#2f7d32}
+.ps ol.fl{gap:.6mm}
+.ps ol.fl>li{background:none;padding:.6mm 1mm;border-bottom:none}
+.ps ol.fl>li .c{display:block}
+.ps ol.fl>li.rowl .c{display:grid;grid-template-columns:78mm minmax(0,1fr);gap:3mm;align-items:end}
+.ps ol.fl>li.rowl .pp{padding-bottom:1mm}
+.ps .wline{height:6.7mm}
+.ps ol.grid4 .blank{width:4.6em!important}
+.ps ol.grid4>li .c{white-space:nowrap}
+.ps ol.grid4>li{padding:1.6mm 2mm}
+.keys{columns:3;column-gap:6mm;font-size:7.7pt;line-height:1.2}
+@page{size:A4;margin:0}
+</style>
+<div class="wrap backbar" style="padding-block:14px 0"><a href="index.html" style="color:var(--deep);font-family:var(--display);font-weight:800;text-decoration:none">← Все темы</a> &nbsp;·&nbsp; <a href="pdf/13-conditionals.pdf" style="color:var(--deep);font-family:var(--display);font-weight:800;text-decoration:none">PDF для печати</a></div><div class="wrap" id="app"></div>
+<script>window.PS_DATA = {
+  title: "Conditionals 0, 1, 2",
+  subtitle: "10 страниц практики · уровень B1–B1+ · подготовка к ОГЭ",
+  pages: [
+  {
+    n: 1, title: "Zero Conditional", ru: "Всегда так: общие истины",
+    tip: ["<b>If + Present Simple, Present Simple</b>",
+          "If you heat ice, it <b>melts</b>. If I drink coffee at night, I <b>can't</b> sleep."],
+    parts: [
+      { type: "gaps", label: "", ru: "Раскройте скобки (Zero Conditional).", en: "Zero Conditional.",
+        items: ["If you [[heat::heat]] water to 100°C, it [[boils::boil]].",
+                "If you [[mix::mix]] red and yellow, you [[get::get]] orange.",
+                "Plants [[die::die]] if they [[don't get::not / get]] enough water.",
+                "If my cat [[is::be]] hungry, she [[sits::sit]] by the fridge.",
+                "If you [[press::press]] this button, the machine [[stops::stop]].",
+                "If I [[don't sleep::not / sleep]] enough, I [[feel::feel]] tired all day.",
+                "Ice [[melts::melt]] if you [[leave::leave]] it in the sun.",
+                "If it [[rains::rain]], the streets [[get::get]] wet."] }
+    ]
+  },
+  {
+    n: 2, title: "First Conditional", ru: "Реальное будущее",
+    tip: ["<b>If + Present Simple, will + V</b>",
+          "После if — <b>НЕ will</b>: If it rains… (не If it will rain)",
+          "unless = if … not"],
+    parts: [
+      { type: "gaps", label: "", ru: "Раскройте скобки (First Conditional).", en: "First Conditional.",
+        items: ["If it [[rains::rain]] tomorrow, we [[will stay::stay]] at home.",
+                "If you [[don't hurry::not / hurry]], you [[will miss::miss]] the bus.",
+                "I [[will call::call]] you if I [[have::have]] time.",
+                "If she [[studies::study]] hard, she [[will pass::pass]] the exam.",
+                "We [[won't go::not / go]] to the beach if it [[is::be]] cold.",
+                "If you [[eat::eat]] all that cake, you [[will feel::feel]] sick.",
+                "What [[will::will]] you [[do::do]] if you [[don't get::not / get]] the tickets?",
+                "Unless you [[take::take]] an umbrella, you [[will get::get]] wet."] }
+    ]
+  },
+  {
+    n: 3, title: "Chain Story", ru: "Цепочка последствий",
+    tip: ["Конец одного предложения → начало следующего.",
+          "If I <b>get</b> up late, I <b>will miss</b> the bus. If I <b>miss</b> the bus, I…"],
+    parts: [
+      { type: "full", label: "", ru: "Продолжите цепочку: начните каждое предложение с if и следующего события.", en: "Continue the chain.",
+        items: [
+          { p: "I get up late → I miss the bus", a: ["If I get up late(,|) I will miss the bus."] },
+          { p: "I miss the bus → I am late for school", a: ["If I miss the bus(,|) I will be late for school."] },
+          { p: "I am late for school → the teacher is angry", a: ["If I am late for school(,|) the teacher will be angry."] },
+          { p: "the teacher is angry → she calls my parents", a: ["If the teacher is angry(,|) she will (call|phone) my parents."] },
+          { p: "she calls my parents → they don't let me play computer games", a: ["If she (calls|phones) my parents(,|) they won't let me play computer games.", "If she (calls|phones) my parents(,|) they will not let me play computer games."] }
+        ] }
+    ]
+  },
+  {
+    n: 4, title: "Second Conditional", ru: "Нереально сейчас",
+    tip: ["<b>If + Past Simple, would + V</b>",
+          "be → <b>were</b> для всех лиц: If I <b>were</b> you, I would…",
+          "If I had a million dollars, I <b>would travel</b> around the world."],
+    parts: [
+      { type: "gaps", label: "", ru: "Раскройте скобки (Second Conditional).", en: "Second Conditional.",
+        items: ["If I [[had::have]] a million dollars, I [[would buy::buy]] an island.",
+                "If I [[were::be]] you, I [[would talk::talk]] to her.",
+                "If we [[lived::live]] near the sea, we [[would swim::swim]] every day.",
+                "She [[would help::help]] you if she [[knew::know]] the answer.",
+                "If my dad [[didn't work::not / work]] so much, we [[would spend::spend]] more time together.",
+                "What [[would::will]] you [[do::do]] if you [[saw::see]] a ghost?",
+                "If I [[could::can]] fly, I [[would visit::visit]] every country in the world.",
+                "I [[wouldn't eat::not / eat]] that if I [[were::be]] you."] }
+    ]
+  },
+  {
+    n: 5, title: "What Would You Do?", ru: "Ситуации",
+    tip: ["Нереальная ситуация → <b>If + Past Simple, would + V</b>",
+          "Вопрос: What <b>would</b> you <b>do</b> if you <b>found</b> a wallet?"],
+    parts: [
+      { type: "full", label: "", ru: "Составьте предложения во втором типе условных.", en: "Write Second Conditional sentences.",
+        items: [
+          { p: "I don't have a dog because I live in a small flat. (If I didn't…)", a: ["If I didn't live in a small flat(,|) I would have a dog.", "I would have a dog if I didn't live in a small flat."] },
+          { p: "I can't go to the party because I'm ill. (If I weren't…)", a: ["If I (were|was) not ill(,|) I would go to the party.", "If I weren't ill(,|) I would go to the party.", "If I wasn't ill(,|) I would go to the party.", "I would go to the party if I (weren't|wasn't) ill."] },
+          { p: "He doesn't know her number, so he doesn't call her. (If he knew…)", a: ["If he knew her number(,|) he would call her.", "He would call her if he knew her number."] },
+          { p: "We don't have a car, so we don't travel much. (If we had…)", a: ["If we had a car(,|) we would travel (more|a lot).", "We would travel (more|a lot) if we had a car."] },
+          { p: "You / find a wallet in the street / what / do? (question)", a: ["What would you do if you found a wallet in the street?"] }
+        ] }
+    ]
+  },
+  {
+    n: 6, title: "Real or Unreal?", ru: "First или Second Conditional?",
+    tip: ["Реально, может случиться → <b>If + Present, will</b>",
+          "Нереально, маловероятно → <b>If + Past, would</b>",
+          "If I <b>have</b> time, I <b>will</b> help. / If I <b>had</b> time, I <b>would</b> help."],
+    parts: [
+      { type: "gaps", label: "", ru: "Выберите правильный вариант.", en: "Choose the correct option.",
+        items: ["If it {{is|were}} sunny tomorrow, we'll go to the park.",
+                "If I {{were|am}} a bird, I would fly to Africa.",
+                "If you heat ice, it {{melts|would melt}}.",
+                "I {{would buy|will buy}} a castle if I won the lottery.",
+                "If you {{study|studied}} hard, you'll pass the exam.",
+                "If I {{knew|know}} his address, I would send him a postcard.",
+                "We'll be late if we {{don't leave|didn't leave}} now.",
+                "If I lived in Paris, I {{would visit|will visit}} the Louvre every week."] }
+    ]
+  },
+  {
+    n: 7, title: "Spot the Mistake", ru: "Найди и исправь ошибку",
+    tip: ["В каждом предложении <b>не больше одной</b> ошибки. Два предложения правильные.",
+          "После if — не will и не would!"],
+    parts: [
+      { type: "errors", label: "", ru: "Нажмите на неправильное слово и впишите правильный вариант. Если ошибки нет, нажмите «Ошибки нет».", en: "Find and correct the mistake. Two sentences are correct.",
+        items: ["If it *will|—* rain, we'll stay at home.",
+                "If I *have|had* more money, I would buy a car.",
+                "If I *was|were* you, I would apologise.",
+                "If you *will|—* see Tom, tell him to call me.",
+                "If she studied more, she *will|would* get better marks.",
+                "If you heat ice, it *will|—* melts.",
+                "I'll be happy if you come to my party.",
+                "What would you do if you *meet|met* a famous actor?",
+                "If we *don't|didn't* hurry, we'll be late.",
+                "If I had a dog, I *will|would* walk it every day.",
+                "If I were you, I wouldn't do that.",
+                "Unless you *don't|—* hurry, you'll miss the train.",
+                "If he *know|knew* the answer, he would tell us.",
+                "We *would|will* go to the beach if it's sunny tomorrow."] }
+    ]
+  },
+  {
+    n: 8, title: "Lost in Translation", ru: "Перевод",
+    tip: ["«Если завтра будет дождь…» → If it <b>rains</b> tomorrow… (без will!)",
+          "«Если бы я был тобой…» → If I <b>were</b> you, I <b>would</b>…"],
+    parts: [
+      { type: "translate", label: "", ru: "Переведите на английский язык.", en: "Translate into English.",
+        items: [
+          { p: "Если завтра будет дождь, мы останемся дома.", a: ["If it rains tomorrow(,|) we will stay (at |)home.", "We will stay (at |)home if it rains tomorrow."] },
+          { p: "Если ты нагреешь лёд, он тает. (общая истина)", a: ["If you heat ice(,|) it melts."] },
+          { p: "Если бы я был тобой, я бы ей позвонил.", a: ["If I were you(,|) I would (call|phone|ring) her."] },
+          { p: "Если бы у меня было больше времени, я бы читал больше книг.", a: ["If I had more time(,|) I would read more books."] },
+          { p: "Я помогу тебе, если ты попросишь.", a: ["I will help you if you ask (me|)."] },
+          { p: "Что бы ты сделал, если бы выиграл миллион?", a: ["What would you do if you won a million?", "What would you do if you won a million (dollars|roubles|rubles)?"] },
+          { p: "Если ты не поторопишься, ты опоздаешь на поезд.", a: ["If you don't hurry(,|) you will miss the train.", "Unless you hurry(,|) you will miss the train.", "If you don't hurry(,|) you will be late for the train."] },
+          { p: "Если бы я умел рисовать, я бы стал художником.", a: ["If I could (draw|paint)(,|) I would become an artist.", "If I could (draw|paint)(,|) I would be an artist."] }
+        ] }
+    ]
+  },
+  {
+    n: 9, title: "ОГЭ-формат: If I Were an Astronaut", ru: "Текст с пропусками в формате ОГЭ",
+    tip: ["Нереальная мечта → if + Past Simple, would + V; be → were.",
+          "Не все слова — глаголы: STAR → stars, FAR → farther / further."],
+    parts: [
+      { type: "oge", label: "", ru: "Преобразуйте слова справа так, чтобы они грамматически соответствовали содержанию текста.", en: "Use the words on the right to complete the text.",
+        items: [
+          { t: "When I was little, I dreamed of becoming an astronaut. If I [[were]] an astronaut now, I would fly to Mars.", w: "BE" },
+          { t: "I [[would take]] lots of photos of the Earth from space.", w: "TAKE" },
+          { t: "If I had a telescope on my spaceship, I would look at the [[stars]] every night.", w: "STAR" },
+          { t: "My mum says that if I [[studied]] physics harder, I could really become one.", w: "STUDY" },
+          { t: "Last year I [[visited]] the space museum in Moscow.", w: "VISIT" },
+          { t: "It was the [[most interesting]] museum I have ever seen.", w: "INTERESTING" },
+          { t: "Our guide told [[us]] about Yuri Gagarin, the first man in space.", w: "WE" },
+          { t: "If I [[get]] good marks this year, my parents will take me to Baikonur next summer.", w: "GET" },
+          { t: "I'm sure it [[will be]] an amazing trip!", w: "BE" }
+        ] }
+    ]
+  },
+  {
+    n: 10, title: "ОГЭ-формат: Save Energy at Home", ru: "Текст с пропусками в формате ОГЭ",
+    tip: ["Реальные советы → If + Present Simple, will / Present Simple.",
+          "Сравнение: MUCH → more; CHEAP → cheaper."],
+    parts: [
+      { type: "oge", label: "", ru: "Преобразуйте слова справа так, чтобы они грамматически соответствовали содержанию текста.", en: "Use the words on the right to complete the text.",
+        items: [
+          { t: "Saving energy is easy. If you [[turn]] off the lights when you leave a room, you will save a lot.", w: "TURN" },
+          { t: "If you take a shower instead of a bath, you [[will use]] less water.", w: "USE" },
+          { t: "Many families [[don't know]] how much energy they waste.", w: "NOT KNOW" },
+          { t: "Our family [[started]] saving energy last year.", w: "START" },
+          { t: "Since then our bills [[have become]] much smaller.", w: "BECOME" },
+          { t: "Now we use [[less]] electricity than before.", w: "LITTLE" },
+          { t: "If everybody [[did]] the same, our planet would be much cleaner.", w: "DO" },
+          { t: "My little brother has made posters for all the [[rooms]] in our house.", w: "ROOM" },
+          { t: "They remind [[us]] to switch off our computers at night.", w: "WE" }
+        ] }
+    ]
+  }
+  ]
+};
+</script>
+<script>
+(function(){
+const PRINT = false;
+const D = window.PS_DATA;
+const $ = (s,el=document)=>el.querySelector(s);
+const esc = s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+/* ---------- answer logic ---------- */
+function expand(s){
+  const m = s.match(/\(([^()]*\|[^()]*)\)/);
+  if(!m) return [s];
+  const out=[];
+  m[1].split("|").forEach(alt=>expand(s.slice(0,m.index)+alt+s.slice(m.index+m[0].length)).forEach(x=>out.push(x)));
+  return out;
+}
+const CONTR = [["won't","will not"],["can't","cannot"],["n't"," not"],["'m"," am"],["'re"," are"],["'s"," is"]];
+function norm(s){
+  s = s.toLowerCase().replace(/[’‘`´]/g,"'").replace(/café/g,"cafe").replace(/mom/g,"mum");
+  s = s.replace(/\b(does|do|did|is|are|was|were|has|have|had|could|should|would)nt\b/g,"$1 not").replace(/\bwont\b/g,"will not").replace(/\bcant\b/g,"cannot").replace(/\bim\b/g,"i am").replace(/\b(he|she)s\b/g,"$1 is").replace(/\b(you|they)re\b/g,"$1 are");
+  s = s.replace(/\b(does|do|did|is|are|was|were|has|have|had|could|should|would)n't\b/g,"$1 not").replace(/\bcan't\b/g,"cannot").replace(/\bwon't\b/g,"will not").replace(/\bcannot\b/g,"can not").replace(/\bcan not\b/g,"cannot");
+  s = s.replace(/\bdoesn't\b/g,"does not").replace(/\bdon't\b/g,"do not").replace(/\bisn't\b/g,"is not").replace(/\baren't\b/g,"are not");
+  s = s.replace(/\b(he|she|it|what|who|that|there)'s\b/g,"$1 is").replace(/\bi'm\b/g,"i am").replace(/\b(you|we|they)'re\b/g,"$1 are");
+  s = s.replace(/'/g,"").replace(/[.,!?;:"“”«»()—–]/g," ").replace(/(\d) (\d)/g,"$1$2").replace(/\s+/g," ").trim();
+  return s;
+}
+function accepted(spec){ // spec: string with " / " alternatives or array
+  const list = Array.isArray(spec)? spec : spec.split(" / ");
+  const out=[]; list.forEach(a=>expand(a).forEach(x=>out.push(x))); return out;
+}
+function first(spec){ return accepted(spec)[0].replace(/\s+/g," ").replace(/ ([.,?!])/g,"$1").trim(); }
+const ZERO=s=>/^\s*[-—–0xхø]\s*$/i.test(s)?"zero":s;
+function matches(val,spec){ val=ZERO(val); spec=(Array.isArray(spec)?spec:spec.split(" / ")).map(ZERO); const v=norm(val); if(!v) return false; return accepted(spec).some(a=>norm(a)===v); }
+// gap text parsing: [[answer::hint]]
+function parseGaps(t){
+  const parts=[]; let last=0; const re=/\[\[(.+?)\]\]|\{\{(.+?)\}\}/g; let m;
+  while((m=re.exec(t))){ parts.push({txt:t.slice(last,m.index)});
+    if(m[2]!==undefined){ const o=m[2].split("|"); parts.push({ans:o[0], choice:[...o].sort((a,b)=>a.localeCompare(b))}); }
+    else { const [ans,hint]=m[1].split("::"); parts.push({ans,hint}); }
+    last=re.lastIndex; }
+  parts.push({txt:t.slice(last)}); return parts;
+}
+function parseErr(t){ // returns tokens [{w, wrong?, fix}]
+  return t.split(" ").map(w=>{ const m=w.match(/^\*(.+)\|(.+)\*(.*)$/); return m? {w:m[1]+m[3], err:true, fix:m[2]} : {w}; });
+}
+
+/* ---------- decorations ---------- */
+function sprig(cls=""){
+  let leaves=""; const pts=[[18,58,-40],[30,46,-20],[24,36,-60],[42,32,-10],[36,20,-50],[54,16,5]];
+  pts.forEach(([x,y,r],i)=>{ leaves+=`<path d="M0 0C6-7 16-7 22 0C16 7 6 7 0 0Z" transform="translate(${x} ${y}) rotate(${r})" fill="var(${i%2?"--leaf2":"--leaf1"})"/>`; });
+  return `<svg class="sprig ${cls}" viewBox="0 0 80 72" aria-hidden="true"><path d="M6 70C20 52 38 30 62 14" stroke="var(--stem)" stroke-width="2.4" fill="none" stroke-linecap="round"/>${leaves}</svg>`;
+}
+const tipHTML = p => `<div class="tip"><div class="lab">Запомни!</div><ul>${p.tip.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;
+const profHTML = p => p.profile? `<div class="profile"><div class="ava">${p.profile.name.replace(/'s.*$/,"").split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase()}</div><div><h3>${p.profile.name}</h3><ul>${p.profile.lines.map(l=>`<li>${l}</li>`).join("")}</ul></div></div>`:"";
+const instr = pt => `<div class="plab">${pt.label?`<div class="pl">${pt.label}</div>`:""}<div class="instr"><b>${pt.ru}</b><i>${pt.en}</i></div></div>`;
+
+/* ================= INTERACTIVE ================= */
+function renderInteractive(){
+  const app=$("#app");
+  app.innerHTML = `<header class="hero">${sprig()}<div><h1>${D.title}</h1><div class="sub">${D.subtitle}</div></div>${sprig("r")}</header>
+  <nav class="tabs" aria-label="Страницы">${D.pages.map(p=>`<button type="button" data-p="${p.n}"><span class="num">${p.n}</span><span>${p.title.replace("ОГЭ-формат: ","ОГЭ · ")}</span><span class="sc" id="sc${p.n}"></span></button>`).join("")}</nav>
+  <main id="view"></main><div class="foot">© Чемоданчик учителя английского</div>`;
+  app.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(+b.dataset.p,true));
+  let start=1; const h=(location.hash||"").replace("#p",""); if(+h>=1&&+h<=10) start=+h;
+  show(start,false);
+}
+const state={}; // per page: saved html? keep DOM per page
+const views={};
+function show(n,scroll){
+  const view=$("#view");
+  if(!views[n]) views[n]=buildPage(D.pages[n-1]);
+  view.replaceChildren(views[n]);
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-current",+b.dataset.p===n?"true":"false"));
+  const cur=document.querySelector(`nav.tabs button[data-p="${n}"]`); if(cur) cur.scrollIntoView({block:"nearest",inline:"center"});
+  try{ history.replaceState(null,"","#p"+n);}catch(e){}
+  if(scroll) view.scrollIntoView({block:"start"});
+}
+let uid=0;
+function buildPage(p){
+  const el=document.createElement("section"); el.className="sheet";
+  let h=`<div class="phead"><div class="circle">${p.n}</div><div><h2>${p.title}</h2><div class="ru">${p.ru}</div></div></div>${profHTML(p)}${tipHTML(p)}`;
+  p.parts.forEach((pt,pi)=>{ h+=`<div class="part">${instr(pt)}${partI(pt,p.n,pi)}</div>`; });
+  h+=`<div class="actions"><button class="btn main" data-a="check">Проверить</button><button class="btn" data-a="show">Показать ответы</button><button class="btn" data-a="reset">Начать заново</button><span class="score" aria-live="polite"></span></div>`;
+  el.innerHTML=h;
+  // error-token interactions
+  el.querySelectorAll(".eitem").forEach(li=>{
+    const fix=li.querySelector(".efix"), inp=fix.querySelector("input");
+    li.querySelectorAll(".tok").forEach(t=>t.onclick=()=>{ li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); li.querySelector(".none").classList.remove("on"); t.classList.add("sel"); li.dataset.pick=t.dataset.i; fix.hidden=false; inp.focus(); clearMark(li); });
+    li.querySelector(".none").onclick=(e)=>{ li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); e.currentTarget.classList.add("on"); li.dataset.pick="none"; fix.hidden=true; clearMark(li); };
+  });
+  el.querySelector('[data-a="check"]').onclick=()=>check(el,p,false);
+  el.querySelector('[data-a="show"]').onclick=()=>check(el,p,true);
+  el.querySelector('[data-a="reset"]').onclick=()=>{ delete views[p.n]; $("#sc"+p.n).textContent=""; show(p.n,false); };
+  return el;
+}
+function clearMark(li){ li.classList.remove("ok","bad"); const m=li.querySelector(".model"); if(m) m.remove(); }
+function gapInput(ans){ const w=Math.max(4, Math.max(...accepted(ans).map(a=>a.length))+2); return `<input class="gap" id="g${++uid}" data-ans="${esc(ans)}" style="width:${w}ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="ответ">`; }
+function choiceSel(x){ return `<select class="gap choice" id="c${++uid}" data-ans="${esc(x.ans)}" aria-label="выбор"><option value="">…</option>${x.choice.map(o=>`<option>${esc(o)}</option>`).join("")}</select>`; }
+function gapLine(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : x.choice? choiceSel(x) : gapInput(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function partI(pt){
+  if(pt.type==="gaps"){
+    return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+
+      `<ol class="items ${pt.cols===4?"grid4":""}">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${gapLine(t)}</span></li>`).join("")}</ol>`;
+  }
+  if(pt.type==="full"||pt.type==="translate"){
+    return `<ol class="items">${pt.items.map((it,i)=>`<li class="fitem" data-kind="${pt.type}"><span class="n">${i+1}</span><div class="c"><div>${it.p}${it.cue?` <span class="cue">(${it.cue})</span>`:""}</div><input class="full" id="f${++uid}" data-acc='${esc(JSON.stringify(it.a)).replace(/'/g,"&#39;")}' autocomplete="off" autocapitalize="sentences" spellcheck="false" aria-label="ответ"></div></li>`).join("")}</ol>`;
+  }
+  if(pt.type==="errors"){
+    return `<ol class="items">${pt.items.map((t,i)=>{ const toks=parseErr(t); const ei=toks.findIndex(x=>x.err); const fix=ei>=0?toks[ei].fix:"";
+      return `<li class="eitem" data-err="${ei}" data-fix="${esc(fix)}"><span class="n">${i+1}</span><div class="c"><div>${toks.map((x,j)=>`<button type="button" class="tok" data-i="${j}">${esc(x.w)}</button>`).join(" ")}</div><div class="erow"><button type="button" class="small none">Ошибки нет</button><span class="efix" hidden>→ <input class="gap" id="e${++uid}" style="width:12ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="исправление"></span></div></div></li>`; }).join("")}</ol>`;
+  }
+  if(pt.type==="scale"){
+    const opts=`<option value="">—</option>`+pt.words.map(w=>`<option>${w}</option>`).join("");
+    return `<div class="bar"></div><div class="scale">${pt.marks.map((m,i)=>`<div class="slot"><span class="pct">${m}</span><select id="s${++uid}" data-ans="${pt.words[i]}" aria-label="${m}">${opts}</select></div>`).join("")}</div>`;
+  }
+  if(pt.type==="oge"){
+    return `<div class="oge">${pt.items.map((it,i)=>`<div class="row"><span>${gapLine(it.t)}</span><span class="w">${it.w}</span></div>`).join("")}</div>`;
+  }
+  if(pt.type==="survey"){
+    return `<ul class="survey">${pt.items.map(x=>`<li>How often do you ${x.replace("…","")}</li>`).join("")}</ul><p class="hint" style="white-space:normal">Это задание для работы в паре, оно не проверяется автоматически.</p>`;
+  }
+  return "";
+}
+function check(el,p,reveal){
+  let ok=0,total=0;
+  el.querySelectorAll("input.gap[data-ans], select[data-ans]").forEach(inp=>{
+    total++; if(reveal){ inp.value = inp.tagName==="SELECT"? inp.dataset.ans : first(inp.dataset.ans); }
+    const good = inp.tagName==="SELECT"? inp.value===inp.dataset.ans : matches(inp.value,inp.dataset.ans);
+    inp.classList.toggle("ok",good); inp.classList.toggle("bad",!good && inp.value.trim()!=="" ); if(good) ok++;
+  });
+  el.querySelectorAll(".fitem").forEach(li=>{
+    total++; const inp=li.querySelector("input"); const acc=JSON.parse(inp.dataset.acc); const model=first(acc[0]);
+    const old=li.querySelector(".model"); if(old) old.remove();
+    if(reveal) inp.value=model;
+    const good=matches(inp.value,acc);
+    inp.classList.remove("ok","bad","soft");
+    if(good){ inp.classList.add("ok"); ok++; }
+    else if(inp.value.trim()){
+      const soft = li.dataset.kind==="translate";
+      inp.classList.add(soft?"soft":"bad");
+      const m=document.createElement("div"); m.className="model"; m.textContent=(soft?"Сравните с образцом: ":"Правильно: ")+model; inp.after(m);
+    }
+  });
+  el.querySelectorAll(".eitem").forEach(li=>{
+    total++; const err=+li.dataset.err, fix=li.dataset.fix, inp=li.querySelector(".efix input");
+    if(reveal){
+      li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); li.querySelector(".none").classList.remove("on");
+      if(err<0){ li.dataset.pick="none"; li.querySelector(".none").classList.add("on"); li.querySelector(".efix").hidden=true; }
+      else { li.dataset.pick=String(err); li.querySelector(`.tok[data-i="${err}"]`).classList.add("sel"); li.querySelector(".efix").hidden=false; inp.value= fix==="—"?"— (убрать слово)":fix; }
+    }
+    const pick=li.dataset.pick; let good=false;
+    if(pick===undefined){ li.classList.remove("ok","bad"); return; }
+    if(err<0) good = pick==="none";
+    else if(pick===String(err)){ const v=inp.value.trim(); good = fix==="—"? (/^(|убрать.*|удалить.*|delete|remove|нет|ничего)$/i.test(v.replace(/[—–\-()]/g,"").trim())) : matches(v,fix); }
+    const n=li.querySelector(".n"); n.classList.toggle("ok",good); n.classList.toggle("bad",!good);
+    inp.classList.toggle("ok",good && err>=0); inp.classList.toggle("bad",!good && pick!=="none");
+    if(good) ok++;
+  });
+  const s=el.querySelector(".score"); s.textContent = reveal? "Ответы показаны" : `${ok} / ${total}`;
+  if(!reveal) $("#sc"+p.n).textContent=`${ok}/${total}`;
+}
+
+/* ================= PRINT ================= */
+function bl(ans,extra=0){ const L=Math.max(...accepted(ans).map(a=>a.length)); return `<span class="blank" style="width:${Math.max(4,L*0.62+1.6+extra)}em"></span>`; }
+function gapP(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : x.choice? `<span class="chp">(${x.choice.join(" / ")})</span>` : bl(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function partP(pt){
+  if(pt.type==="gaps") return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+`<ol class="items ${pt.cols===4?"grid4":""}">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${gapP(t)}</span></li>`).join("")}</ol>`;
+  if(pt.type==="full"||pt.type==="translate") return `<ol class="items fl">${pt.items.map((it,i)=>{ const L=first(it.a[0]).length; const lines=L>52?2:1;
+     const plen=(it.p+(it.cue||"")).replace(/<[^>]+>/g,"").length; const row=plen<=50;
+     return `<li class="${row?"rowl":""}"><span class="n">${i+1}</span><div class="c"><div class="pp">${it.p}${it.cue?` <span class="cue">(${it.cue})</span>`:""}</div><div class="ll">${'<div class="wline"></div>'.repeat(lines)}</div></div></li>`; }).join("")}</ol>`;
+  if(pt.type==="errors") return `<ol class="items">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${esc(parseErr(t).map(x=>x.w).join(" "))}</span><span class="blank" style="width:7.5em;flex:none"></span></li>`).join("")}</ol>`;
+  if(pt.type==="scale"){ const sh=[...pt.words].sort(); return `<div class="bank">${sh.map(w=>`<span>${w}</span>`).join("")}</div><div class="scale">${pt.marks.map(m=>`<div class="slot"><span class="pct">${m}</span><div class="box"></div></div>`).join("")}</div>`; }
+  if(pt.type==="oge") return `<div class="oge">${pt.items.map((it,i)=>`<div class="row"><span>${gapP(it.t)}</span><span class="w">${it.w}</span></div>`).join("")}</div>`;
+  if(pt.type==="survey") return `<table class="sv"><tr><th>How often do you…</th>${pt.items.slice(0,3).map(x=>`<td>${x}</td>`).join("")}</tr><tr><th>How often do you…</th>${pt.items.slice(3).map(x=>`<td>${x}</td>`).join("")}</tr></table>`;
+  return "";
+}
+function keyFor(pt){
+  if(pt.type==="gaps") return pt.items.map(t=>parseGaps(t).filter(x=>x.ans).map(x=>first(x.ans)).join(" … "));
+  if(pt.type==="oge") return pt.items.map(it=>parseGaps(it.t).filter(x=>x.ans).map(x=>first(x.ans)).join(" … "));
+  if(pt.type==="full"||pt.type==="translate") return pt.items.map(it=>first(it.a[0]));
+  if(pt.type==="errors") return pt.items.map(t=>{ const x=parseErr(t).find(z=>z.err); return x? (x.fix==="—"? `убрать <i>${x.w}</i>: I never eat fast food.` : `${x.w} → <b>${x.fix}</b>`) : "✓ ошибки нет"; });
+  if(pt.type==="scale") return [pt.words.join(" → ")];
+  return null;
+}
+function renderPrint(){
+  document.body.classList.add("print");
+  let h="";
+  D.pages.forEach(p=>{
+    h+=`<section class="ps"><div class="top"><span><b>${D.title}</b> · ${p.n} / ${D.pages.length}</span><span>Name ________________________ &nbsp; Date __________</span></div>${sprig()}
+    <div class="phead"><div class="circle">${p.n}</div><div><h2>${p.title}</h2><div class="ru">${p.ru}</div></div></div>${profHTML(p)}${tipHTML(p)}`;
+    p.parts.forEach(pt=>{ h+=`<div class="part">${instr(pt)}${partP(pt)}</div>`; });
+    h+=`<div class="pfoot"><span>© Чемоданчик учителя английского</span><span>${p.n}</span></div></section>`;
+  });
+  // keys
+  let k=""; D.pages.forEach(p=>{ k+=`<div class="kp"><h4>${p.n}. ${p.title}</h4>`; p.parts.forEach(pt=>{ const ks=keyFor(pt); if(!ks) return; k+=(pt.label?`<div class="kl">${pt.label}</div>`:"")+(pt.type==="scale"?`<div>${ks[0]}</div>`:`<ol>${ks.map(x=>`<li>${x}</li>`).join("")}</ol>`); }); k+=`</div>`; });
+  h+=`<section class="ps"><div class="top"><span><b>${D.title}</b> · Ключи</span><span>для учителя</span></div><div class="phead"><div class="circle">✓</div><div><h2>Answer Key</h2><div class="ru">Ключи ко всем страницам. В заданиях на перевод возможны и другие верные варианты.</div></div></div><div class="keys" style="margin-top:4mm">${k}</div><div class="pfoot"><span>© Чемоданчик учителя английского</span><span></span></div></section>`;
+  $("#app").innerHTML=h;
+}
+PRINT? renderPrint() : renderInteractive();
+window.__PS = {expand,norm,accepted,matches,first,parseGaps,parseErr};
+})();
+</script>
+</html>
