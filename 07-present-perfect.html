@@ -1,0 +1,565 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Present Perfect — ОГЭ грамматика</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@700;800;900&family=PT+Sans+Narrow:wght@400;700&display=swap">
+<style>
+/* Layout: brand "mind map" sheet — green plaques, numbered circles, leaf sprigs; one exercise set per view */
+:root{
+  --paper:#f6faf1; --card:#ffffff; --ink:#1c3520; --muted:#5b7360;
+  --green:#2f7d32; --deep:#1e5a26; --plaque:#e3f0d6; --line:#bcd9a9; --butter:#fbf0c4;
+  --ok:#2e7d32; --ok-bg:#dcefd4; --bad:#b3261e; --bad-bg:#fbe2df; --soft:#8a5a00; --soft-bg:#fff1c7;
+  --leaf1:#5aa340; --leaf2:#86c25a; --stem:#6b8f3a;
+  --display:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --body:"PT Sans Narrow","Arial Narrow","Roboto Condensed",sans-serif;
+  --hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#132016; --card:#1a2a1d; --ink:#e4efe0; --muted:#9bb39f;
+  --green:#7cc47f; --deep:#a6dca5; --plaque:#223826; --line:#36573c; --butter:#3a3520;
+  --ok:#8fd68f; --ok-bg:#1f3a22; --bad:#ff8a80; --bad-bg:#3d1f1d; --soft:#f2c35b; --soft-bg:#3a3018;
+  --leaf1:#4f8f3a; --leaf2:#6fae4e; --stem:#5d7f34; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#132016; --card:#1a2a1d; --ink:#e4efe0; --muted:#9bb39f;
+  --green:#7cc47f; --deep:#a6dca5; --plaque:#223826; --line:#36573c; --butter:#3a3520;
+  --ok:#8fd68f; --ok-bg:#1f3a22; --bad:#ff8a80; --bad-bg:#3d1f1d; --soft:#f2c35b; --soft-bg:#3a3018;
+  --leaf1:#4f8f3a; --leaf2:#6fae4e; --stem:#5d7f34; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.hero{display:flex;align-items:center;justify-content:center;gap:12px;text-align:center}
+.hero h1{font-size:clamp(34px,7vw,56px);font-weight:900;color:var(--deep);letter-spacing:-.5px;line-height:1}
+.hero .sub{color:var(--muted);font-size:17px;margin-top:6px}
+.sprig{width:64px;height:auto;flex:none}
+.sprig.r{transform:scaleX(-1)}
+nav.tabs{display:flex;gap:8px;overflow-x:auto;padding:16px 2px 10px;scrollbar-width:thin}
+nav.tabs button{flex:none;font:inherit;font-size:16px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 6px;display:flex;align-items:center;gap:8px;cursor:pointer}
+nav.tabs button .num{width:28px;height:28px;border-radius:50%;background:var(--plaque);color:var(--deep);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:15px}
+nav.tabs button[aria-current="true"]{border-color:var(--green);background:var(--plaque)}
+nav.tabs button[aria-current="true"] .num{background:var(--green);color:var(--card)}
+nav.tabs button .sc{font-size:14px;color:var(--ok);font-weight:700}
+nav.tabs button:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.sheet{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:22px clamp(14px,3vw,30px) 26px;position:relative}
+.phead{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.circle{width:52px;height:52px;border-radius:50%;background:var(--green);color:var(--card);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:26px;flex:none}
+.phead h2{font-size:clamp(24px,4.4vw,34px);color:var(--deep);font-weight:900;line-height:1.1}
+.phead .ru{color:var(--muted);font-size:18px}
+.tip{background:var(--butter);border-radius:14px;padding:12px 16px;margin:14px 0 6px}
+.tip .lab{font-family:var(--hand);font-size:26px;color:var(--deep);line-height:1}
+.tip ul{margin:4px 0 0;padding-left:20px}
+.tip li{margin:2px 0}
+.part{margin-top:24px}
+.plab{display:flex;align-items:flex-start;gap:10px}
+.pl{width:34px;height:34px;border-radius:50%;background:var(--plaque);color:var(--deep);border:2px solid var(--green);display:grid;place-items:center;font-family:var(--display);font-weight:900;flex:none}
+.instr b{display:block;font-weight:700}
+.instr i{color:var(--muted);font-size:16px}
+ol.items{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+ol.items>li{display:flex;gap:10px;align-items:baseline;background:var(--paper);border-radius:12px;padding:8px 12px;min-width:0}
+ol.items>li .n{font-family:var(--display);font-weight:800;color:var(--green);min-width:1.6em;flex:none}
+ol.items>li .c{min-width:0;flex:1}
+ol.grid4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:640px){ol.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+input.gap{font:inherit;color:var(--ink);background:var(--card);border:none;border-bottom:2px solid var(--green);border-radius:6px 6px 0 0;padding:1px 6px;margin:2px 2px;max-width:100%}
+select.gap{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:8px;padding:1px 4px;margin:2px}
+.chp{font-weight:700;color:#1e5a26;white-space:nowrap}
+input.full{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:6px 10px;width:100%;margin-top:6px}
+.hint{color:var(--muted);font-size:16px;white-space:nowrap}
+.cue{color:var(--green);font-weight:700}
+.ok{background:var(--ok-bg)!important;border-color:var(--ok)!important;color:var(--ok)!important}
+.bad{background:var(--bad-bg)!important;border-color:var(--bad)!important;color:var(--bad)!important}
+.soft{background:var(--soft-bg)!important;border-color:var(--soft)!important}
+.model{font-size:16px;color:var(--soft);margin-top:4px}
+.model.okm{color:var(--ok)}
+.bank{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.bank span{background:var(--plaque);border-radius:999px;padding:2px 12px;font-size:17px}
+.tok{font:inherit;color:var(--ink);background:none;border:none;border-radius:6px;padding:1px 3px;margin:0 -1px;cursor:pointer}
+.tok:hover{background:var(--plaque)}
+.tok.sel{background:var(--butter);outline:2px solid var(--soft)}
+.erow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.small{font:inherit;font-size:15px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:2px 12px;cursor:pointer}
+.small.on{background:var(--plaque);border-color:var(--green)}
+.scale{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:12px}
+.scale .slot{display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--paper);border-radius:12px;padding:8px 4px}
+.scale .pct{font-family:var(--display);font-weight:800;color:var(--green);font-size:15px}
+.scale select{font:inherit;font-size:15px;width:100%;border:2px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);padding:3px}
+.bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--green),var(--line));margin-top:8px}
+@media (max-width:640px){.scale{grid-template-columns:repeat(2,minmax(0,1fr))}.bar{display:none}}
+.profile{display:flex;gap:16px;background:var(--plaque);border-radius:16px;padding:14px 16px;margin-top:12px}
+.profile .ava{width:64px;height:64px;border-radius:50%;background:var(--card);border:3px solid var(--green);display:grid;place-items:center;font-family:var(--display);font-weight:900;color:var(--deep);font-size:24px;flex:none}
+.profile h3{color:var(--deep);font-size:22px}
+.profile ul{margin:4px 0 0;padding-left:18px}
+.oge{margin-top:12px;border:2px solid var(--line);border-radius:14px;overflow:hidden}
+.oge .row{display:grid;grid-template-columns:minmax(0,1fr) 9.5em;border-top:1px solid var(--line);align-items:baseline}
+.oge .row:first-child{border-top:none}
+.oge .row>*{padding:8px 10px}
+.oge .on{font-family:var(--display);font-weight:800;color:var(--green)}
+.oge .w{font-family:var(--display);font-weight:800;color:var(--deep);background:var(--plaque);align-self:stretch;letter-spacing:.5px;font-size:15px;display:flex;align-items:center}
+.survey{list-style:disc;margin:8px 0 0 24px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:26px}
+.btn{font:inherit;font-family:var(--display);font-weight:800;font-size:17px;border-radius:999px;padding:9px 20px;border:2px solid var(--green);cursor:pointer;background:var(--card);color:var(--deep)}
+.btn.main{background:var(--green);color:var(--card)}
+.score{font-family:var(--display);font-weight:900;font-size:20px;color:var(--deep);margin-left:auto}
+.foot{text-align:center;color:var(--muted);font-size:15px;margin-top:22px}
+@media (prefers-reduced-motion:no-preference){.btn,.small,nav.tabs button{transition:background .15s,border-color .15s}}
+
+/* ---------- PRINT MODE ---------- */
+body.print{font-size:10.8pt;background:#fff;color:#1c3520}
+body.print .wrap{max-width:none;padding:0}
+.ps{width:210mm;height:297mm;overflow:hidden;padding:9mm 12mm 13mm;position:relative;break-after:page;display:flex;flex-direction:column}
+.ps:last-child{break-after:auto}
+.ps .top{display:flex;justify-content:space-between;align-items:flex-end;font-size:10pt;color:#5b7360;border-bottom:1.5px solid #bcd9a9;padding-bottom:3px}
+.ps .top b{font-family:var(--display);color:#1e5a26;font-size:11pt}
+.ps .phead{margin-top:3mm}
+.ps .circle{width:13mm;height:13mm;font-size:19pt}
+.ps .phead h2{font-size:21pt}
+.ps .phead .ru{font-size:12pt}
+.ps .sprig{position:absolute;top:13mm;right:12mm;width:22mm}
+.ps .tip{padding:2.4mm 4mm;margin:3mm 0 0;font-size:10.6pt}
+.ps .tip .lab{font-size:17pt}
+.ps .part{margin-top:3.4mm}
+.ps .pl{width:8mm;height:8mm;font-size:11pt}
+.ps .instr i{font-size:9.5pt}
+.ps ol.items{gap:1.8mm;margin-top:2.6mm}
+.ps ol.items>li{padding:1.4mm 3mm;border-radius:2.5mm}
+.blank{display:inline-block;border-bottom:1.3px solid #1c3520;margin:0 2px;height:1.05em;vertical-align:baseline}
+.wline{border-bottom:1.1px solid #8fb07a;height:8.4mm}
+.ps .hint{font-size:10pt}
+.ps .scale .slot{padding:2mm 1mm}
+.ps .scale .box{height:7mm;width:100%;border-bottom:1.3px solid #1c3520}
+.ps .oge .row>*{padding:1.9mm 3mm}
+.ps .oge .row{grid-template-columns:minmax(0,1fr) 40mm}
+.ps table.sv{width:100%;border-collapse:collapse;margin-top:2.5mm;font-size:10.6pt}
+.ps table.sv td,.ps table.sv th{border:1px solid #bcd9a9;padding:1.5mm 3mm;text-align:left}
+.ps table.sv th{background:#e3f0d6;font-family:var(--display)}
+.ps .pfoot{position:absolute;left:12mm;right:12mm;bottom:6mm;display:flex;justify-content:space-between;font-size:9pt;color:#5b7360}
+.ps .profile{padding:3mm 4mm;margin-top:3mm;font-size:10.6pt}
+.ps .profile .ava{width:14mm;height:14mm;font-size:15pt}
+.ps .profile ul{columns:2;column-gap:6mm}
+
+.keys .kp{break-inside:avoid;margin-bottom:3.5mm}
+.keys h4{font-family:var(--display);color:#1e5a26;font-size:11pt;margin:0 0 1mm}
+.keys ol{margin:0;padding-left:6mm}
+.keys .kl{font-weight:700;color:#2f7d32}
+.ps ol.fl{gap:.6mm}
+.ps ol.fl>li{background:none;padding:.6mm 1mm;border-bottom:none}
+.ps ol.fl>li .c{display:block}
+.ps ol.fl>li.rowl .c{display:grid;grid-template-columns:78mm minmax(0,1fr);gap:3mm;align-items:end}
+.ps ol.fl>li.rowl .pp{padding-bottom:1mm}
+.ps .wline{height:6.7mm}
+.ps ol.grid4 .blank{width:4.6em!important}
+.ps ol.grid4>li .c{white-space:nowrap}
+.ps ol.grid4>li{padding:1.6mm 2mm}
+.keys{columns:3;column-gap:6mm;font-size:7.7pt;line-height:1.2}
+@page{size:A4;margin:0}
+</style>
+<div class="wrap backbar" style="padding-block:14px 0"><a href="index.html" style="color:var(--deep);font-family:var(--display);font-weight:800;text-decoration:none">← Все темы</a> &nbsp;·&nbsp; <a href="pdf/07-present-perfect.pdf" style="color:var(--deep);font-family:var(--display);font-weight:800;text-decoration:none">PDF для печати</a></div><div class="wrap" id="app"></div>
+<script>window.PS_DATA = {
+  title: "Present Perfect",
+  subtitle: "10 страниц практики · уровень B1–B1+ · подготовка к ОГЭ",
+  pages: [
+  {
+    n: 1, title: "Third Form Challenge", ru: "Третья форма глагола (V3)",
+    tip: ["Правильные глаголы: V3 = V-ed: work → work<b>ed</b>, stop → sto<b>pped</b>, study → stud<b>ied</b>",
+          "Неправильные — 3-я колонка: go → <b>gone</b>, see → <b>seen</b>, write → <b>written</b>",
+          "have / has + V3: I <b>have done</b>, she <b>has gone</b>"],
+    parts: [
+      { type: "gaps", label: "", ru: "Напишите третью форму глагола (V3).", en: "Write the past participle.", cols: 4,
+        items: ["be → [[been]]","go → [[gone]]","see → [[seen]]","do → [[done]]",
+                "write → [[written]]","eat → [[eaten]]","take → [[taken]]","give → [[given]]",
+                "break → [[broken]]","speak → [[spoken]]","choose → [[chosen]]","forget → [[forgotten]]",
+                "buy → [[bought]]","find → [[found]]","lose → [[lost]]","meet → [[met]]",
+                "fly → [[flown]]","drive → [[driven]]","swim → [[swum]]","begin → [[begun]]",
+                "study → [[studied]]","stop → [[stopped]]","try → [[tried]]","plan → [[planned]]"] }
+    ]
+  },
+  {
+    n: 2, title: "Life Experiences", ru: "Опыт: ever / never",
+    tip: ["Опыт за всю жизнь: <b>Have</b> you <b>ever been</b> to London?",
+          "never = уже отрицание: I have <b>never</b> seen snow. (не haven't never)",
+          "has — только для he / she / it"],
+    parts: [
+      { type: "gaps", label: "A", ru: "Раскройте скобки в Present Perfect.", en: "Put the verbs in the Present Perfect.",
+        items: ["[[Have::do]] you ever [[been::be]] to St Petersburg?",
+                "My grandma [[has never flown::never / fly]] on a plane.",
+                "I [[have never tried::never / try]] sushi. Is it good?",
+                "[[Has::do]] your brother ever [[met::meet]] a famous person?",
+                "We [[have visited::visit]] five countries so far.",
+                "She [[has read::read]] all the Harry Potter books three times!",
+                "They [[haven't seen::not / see]] the sea yet.",
+                "How many times [[have::do]] you [[watched::watch]] this film?"] },
+      { type: "full", label: "B", ru: "Задайте вопросы с ever.", en: "Write questions with ever.",
+        items: [
+          { p: "ride / a horse", a: ["Have you ever ridden a horse?"] },
+          { p: "climb / a mountain", a: ["Have you ever climbed a mountain?"] },
+          { p: "win / a competition", a: ["Have you ever won a competition?"] },
+          { p: "be / on TV", a: ["Have you ever been on TV?"] },
+          { p: "break / your arm", a: ["Have you ever broken your arm?"] }
+        ] }
+    ]
+  },
+  {
+    n: 3, title: "Just, Already, Yet", ru: "Место наречий",
+    tip: ["<b>just / already</b> — между have и V3: I have <b>just</b> eaten.",
+          "<b>yet</b> — в конце, в вопросах и отрицаниях: Have you finished <b>yet</b>? I haven't finished <b>yet</b>.",
+          "<b>already</b> — уже (в утверждении)"],
+    parts: [
+      { type: "full", label: "", ru: "Поставьте слово в скобках на правильное место и перепишите предложение.", en: "Put the word in the correct place.",
+        items: [
+          { p: "I have finished my homework.", cue: "just", a: ["I have just finished my homework."] },
+          { p: "Has the film started?", cue: "yet", a: ["Has the film started yet?"] },
+          { p: "She has bought a present for Mum.", cue: "already", a: ["She has already bought a present for (Mum|mum)."] },
+          { p: "We haven't decided where to go.", cue: "yet", a: ["We haven't decided where to go yet."] },
+          { p: "The train has left.", cue: "just", a: ["The train has just left."] },
+          { p: "Have you packed your bag?", cue: "already", a: ["Have you already packed your bag?", "Have you packed your bag already?"] },
+          { p: "My parents haven't come home.", cue: "yet", a: ["My parents haven't come home yet."] },
+          { p: "I have seen this video ten times!", cue: "already", a: ["I have already seen this video ten times!"] }
+        ] }
+    ]
+  },
+  {
+    n: 4, title: "For or Since?", ru: "for + период · since + начало",
+    tip: ["<b>for</b> + период: for two hours, for a week, for ages",
+          "<b>since</b> + момент начала: since Monday, since 2015, since I was a child",
+          "How long have you known her? — <b>For</b> three years. / <b>Since</b> 2023."],
+    parts: [
+      { type: "gaps", label: "A", ru: "Вставьте for или since.", en: "for or since?", cols: 4,
+        items: ["[[for]] ten minutes","[[since]] Monday","[[since]] 2019","[[for]] a long time",
+                "[[since]] last summer","[[for]] three days","[[since]] 9 o'clock","[[for]] ages",
+                "[[since]] I was born","[[for]] a month","[[since]] Christmas","[[for]] two years"] },
+      { type: "gaps", label: "B", ru: "Раскройте скобки в Present Perfect и вставьте for или since.", en: "Present Perfect + for / since.",
+        items: ["I [[have known::know]] my best friend [[since]] we were six.",
+                "We [[have lived::live]] in this flat [[for]] ten years.",
+                "She [[hasn't eaten::not / eat]] meat [[since]] 2020.",
+                "My dad [[has worked::work]] at the hospital [[for]] a long time.",
+                "How long [[have::do]] you [[had::have]] your dog? — [[For]] two years.",
+                "It [[hasn't rained::not / rain]] [[since]] the beginning of June."] }
+    ]
+  },
+  {
+    n: 5, title: "Been or Gone?", ru: "been / gone и результат сейчас",
+    tip: ["She <b>has been</b> to Paris. — была и вернулась",
+          "She <b>has gone</b> to Paris. — уехала и сейчас там",
+          "Результат сейчас: I've lost my keys → (сейчас) я не могу войти"],
+    parts: [
+      { type: "gaps", label: "A", ru: "Вставьте been или gone.", en: "been or gone?",
+        items: ["\"Where's Tom?\" — \"He has [[gone]] to the shop. He'll be back soon.\"",
+                "I have [[been]] to Italy twice. I loved it!",
+                "My parents aren't at home. They have [[gone]] to the theatre.",
+                "\"Where have you [[been]]?\" — \"At the library. I've just come back.\"",
+                "Kate has [[gone]] to Spain for a month, so I can't call her.",
+                "Have you ever [[been]] to a rock concert?"] },
+      { type: "full", label: "B", ru: "Что случилось? Опишите результат в Present Perfect.", en: "What has happened?",
+        items: [
+          { p: "Mike can't open the door. (lose / his keys)", a: ["He has lost his keys.", "Mike has lost his keys."] },
+          { p: "Anna's hair is short now. (cut / her hair)", a: ["She has cut her hair.", "Anna has cut her hair.", "She has had her hair cut.", "Anna has had her hair cut."] },
+          { p: "The floor is wet. (somebody / spill / water)", a: ["Somebody has spilt (some|) water.", "Somebody has spilled (some|) water.", "Someone has spilt (some|) water.", "Someone has spilled (some|) water."] },
+          { p: "Dad is very happy. (win / a prize)", a: ["He has won a prize.", "Dad has won a prize."] },
+          { p: "There's no cake left. (the children / eat / it)", a: ["The children have eaten it.", "The children have eaten the cake."] }
+        ] }
+    ]
+  },
+  {
+    n: 6, title: "Present Perfect or Past Simple?", ru: "Время названо или нет?",
+    tip: ["<b>Present Perfect</b> — время не названо, важен опыт или результат: I <b>have seen</b> this film.",
+          "<b>Past Simple</b> — время названо: I <b>saw</b> it last week. Маркеры: yesterday, ago, last…, in 2020",
+          "When…? → всегда Past Simple: When <b>did</b> you <b>see</b> it?"],
+    parts: [
+      { type: "gaps", label: "", ru: "Раскройте скобки: Present Perfect или Past Simple?", en: "Present Perfect or Past Simple?",
+        items: ["I [[have been::be]] to London three times. The last time I [[went::go]] there was in 2023.",
+                "\"[[Have::do]] you ever [[eaten::eat]] snails?\" — \"Yes, I [[ate::eat]] them in France last year.\"",
+                "Oh no! I [[have broken::break]] my phone! Now I can't call anyone.",
+                "Shakespeare [[wrote::write]] 39 plays.",
+                "When [[did::do]] you [[start::start]] learning English?",
+                "My sister [[has just passed::just / pass]] her driving test!",
+                "We [[moved::move]] to this town two years ago.",
+                "Look! Somebody [[has opened::open]] the window.",
+                "She [[hasn't finished::not / finish]] her project yet.",
+                "[[Did::do]] you [[see::see]] the match yesterday?"] }
+    ]
+  },
+  {
+    n: 7, title: "Spot the Mistake", ru: "Найди и исправь ошибку",
+    tip: ["В каждом предложении <b>не больше одной</b> ошибки. Два предложения правильные.",
+          "has + he / she / it · have + V3 (не V2)",
+          "Указано прошлое время → Past Simple"],
+    parts: [
+      { type: "errors", label: "", ru: "Нажмите на неправильное слово и впишите правильный вариант. Если ошибки нет, нажмите «Ошибки нет».", en: "Find and correct the mistake. Two sentences are correct.",
+        items: ["She has *went|gone* home.",
+                "He *have|has* finished his homework.",
+                "I *live|have* lived here since 2019.",
+                "I have *saw|seen* this film twice.",
+                "We *have|—* visited Rome last year.",
+                "I haven't finished *already|yet*.",
+                "They haven't *came|come* back yet.",
+                "I have known her for five years.",
+                "*Did|Have* you ever been to Paris?",
+                "How long *do|have* you had this car?",
+                "My parents have just *buyed|bought* a new car.",
+                "She has lived here *since|for* three years.",
+                "Has the post arrived yet?",
+                "I *have|—* saw him yesterday."] }
+    ]
+  },
+  {
+    n: 8, title: "Lost in Translation", ru: "Перевод",
+    tip: ["«Я уже сделал» → I <b>have already done</b>…",
+          "«Я живу здесь с 2019 года» → I <b>have lived</b> here since 2019. (не I live)",
+          "«Ты когда-нибудь был…?» → <b>Have</b> you <b>ever been</b>…?"],
+    parts: [
+      { type: "translate", label: "", ru: "Переведите на английский язык.", en: "Translate into English.",
+        items: [
+          { p: "Я уже сделал домашнее задание.", a: ["I have already done my homework.", "I have done my homework already."] },
+          { p: "Ты когда-нибудь был в Лондоне?", a: ["Have you ever been to London?"] },
+          { p: "Мы знаем друг друга с детства.", a: ["We have known each other since (we were children|childhood|we were kids)."] },
+          { p: "Она только что ушла.", a: ["She has just left.", "She has just gone."] },
+          { p: "Я никогда не видел снег.", a: ["I have never seen snow."] },
+          { p: "Они ещё не приехали.", a: ["They haven't arrived yet.", "They haven't come yet."] },
+          { p: "Сколько времени ты учишь английский? (используй Present Perfect)", a: ["How long have you learnt English?", "How long have you learned English?", "How long have you studied English?"] },
+          { p: "Я потерял ключи и не могу войти.", a: ["I have lost my keys and (I |)can't (get in|go in|come in|open the door)."] },
+          { p: "Это лучший фильм, который я когда-либо видел.", a: ["It is the best film I have ever seen.", "This is the best film I have ever seen.", "It is the best (film|movie) (that|) I have ever seen.", "This is the best (film|movie) (that|) I have ever seen."] },
+          { p: "Мой брат живёт в Казани уже пять лет.", a: ["My brother has lived in Kazan for five years.", "My brother has been living in Kazan for five years."] }
+        ] }
+    ]
+  },
+  {
+    n: 9, title: "ОГЭ-формат: The Youngest Traveller", ru: "Текст с пропусками в формате ОГЭ",
+    tip: ["Маркеры: <b>ever, never, already, since, so far</b> → Present Perfect; <b>in 2022, ago</b> → Past Simple.",
+          "Не все слова — глаголы: COUNTRY → countries, YOUNG → youngest."],
+    parts: [
+      { type: "oge", label: "", ru: "Преобразуйте слова справа так, чтобы они грамматически соответствовали содержанию текста.", en: "Use the words on the right to complete the text.",
+        items: [
+          { t: "Lily is only twelve, but she [[has visited]] thirty countries.", w: "VISIT" },
+          { t: "Her parents are travel bloggers, and they [[have taken]] her with them since she was a baby.", w: "TAKE" },
+          { t: "She [[has seen]] the pyramids, the Great Wall of China and the Northern Lights.", w: "SEE" },
+          { t: "Her first trip was to Thailand. She [[went]] there in 2015, when she was one.", w: "GO" },
+          { t: "Lily has visited many [[countries]] in Asia and Europe.", w: "COUNTRY" },
+          { t: "She is probably the [[youngest]] traveller in her school.", w: "YOUNG" },
+          { t: "\"I [[haven't been]] to Australia yet,\" she says. \"It's my dream!\"", w: "NOT BE" },
+          { t: "Last year she [[wrote]] a book about her travels.", w: "WRITE" },
+          { t: "So far, more than ten thousand [[people]] have bought it.", w: "PERSON" }
+        ] }
+    ]
+  },
+  {
+    n: 10, title: "ОГЭ-формат: A Message from Camp", ru: "Текст с пропусками в формате ОГЭ",
+    tip: ["Письмо пишут «сейчас» → много Present Perfect: just, already, yet, this week.",
+          "Местоимения: I → me / my / myself; WE → us / our."],
+    parts: [
+      { type: "oge", label: "", ru: "Преобразуйте слова справа так, чтобы они грамматически соответствовали содержанию текста.", en: "Use the words on the right to complete the text.",
+        items: [
+          { t: "Hi Mum! I'm writing to you from summer camp. I [[have been]] here for a week now.", w: "BE" },
+          { t: "I [[have made]] a lot of new friends.", w: "MAKE" },
+          { t: "Yesterday we [[climbed]] a hill and watched the sunset.", w: "CLIMB" },
+          { t: "This week I [[have learnt / have learned]] to sail a boat!", w: "LEARN" },
+          { t: "The food is OK, but I [[haven't eaten]] a single vegetable yet.", w: "NOT EAT" },
+          { t: "Our leader, Sam, is great. He always helps [[us]].", w: "WE" },
+          { t: "I'm proud of [[myself]] — I swam across the lake on Monday!", w: "I" },
+          { t: "Today is the [[hottest]] day of the summer.", w: "HOT" },
+          { t: "[[Has]] Grandma got my postcard yet? Love, Masha.", w: "HAVE" }
+        ] }
+    ]
+  }
+  ]
+};
+</script>
+<script>
+(function(){
+const PRINT = false;
+const D = window.PS_DATA;
+const $ = (s,el=document)=>el.querySelector(s);
+const esc = s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+/* ---------- answer logic ---------- */
+function expand(s){
+  const m = s.match(/\(([^()]*\|[^()]*)\)/);
+  if(!m) return [s];
+  const out=[];
+  m[1].split("|").forEach(alt=>expand(s.slice(0,m.index)+alt+s.slice(m.index+m[0].length)).forEach(x=>out.push(x)));
+  return out;
+}
+const CONTR = [["won't","will not"],["can't","cannot"],["n't"," not"],["'m"," am"],["'re"," are"],["'s"," is"]];
+function norm(s){
+  s = s.toLowerCase().replace(/[’‘`´]/g,"'").replace(/café/g,"cafe").replace(/mom/g,"mum");
+  s = s.replace(/\b(does|do|did|is|are|was|were|has|have|had|could|should|would)nt\b/g,"$1 not").replace(/\bwont\b/g,"will not").replace(/\bcant\b/g,"cannot").replace(/\bim\b/g,"i am").replace(/\b(he|she)s\b/g,"$1 is").replace(/\b(you|they)re\b/g,"$1 are");
+  s = s.replace(/\b(does|do|did|is|are|was|were|has|have|had|could|should|would)n't\b/g,"$1 not").replace(/\bcan't\b/g,"cannot").replace(/\bwon't\b/g,"will not").replace(/\bcannot\b/g,"can not").replace(/\bcan not\b/g,"cannot");
+  s = s.replace(/\bdoesn't\b/g,"does not").replace(/\bdon't\b/g,"do not").replace(/\bisn't\b/g,"is not").replace(/\baren't\b/g,"are not");
+  s = s.replace(/\b(he|she|it|what|who|that|there)'s\b/g,"$1 is").replace(/\bi'm\b/g,"i am").replace(/\b(you|we|they)'re\b/g,"$1 are");
+  s = s.replace(/'/g,"").replace(/[.,!?;:"“”«»()—–]/g," ").replace(/(\d) (\d)/g,"$1$2").replace(/\s+/g," ").trim();
+  return s;
+}
+function accepted(spec){ // spec: string with " / " alternatives or array
+  const list = Array.isArray(spec)? spec : spec.split(" / ");
+  const out=[]; list.forEach(a=>expand(a).forEach(x=>out.push(x))); return out;
+}
+function first(spec){ return accepted(spec)[0].replace(/\s+/g," ").replace(/ ([.,?!])/g,"$1").trim(); }
+const ZERO=s=>/^\s*[-—–0xхø]\s*$/i.test(s)?"zero":s;
+function matches(val,spec){ val=ZERO(val); spec=(Array.isArray(spec)?spec:spec.split(" / ")).map(ZERO); const v=norm(val); if(!v) return false; return accepted(spec).some(a=>norm(a)===v); }
+// gap text parsing: [[answer::hint]]
+function parseGaps(t){
+  const parts=[]; let last=0; const re=/\[\[(.+?)\]\]|\{\{(.+?)\}\}/g; let m;
+  while((m=re.exec(t))){ parts.push({txt:t.slice(last,m.index)});
+    if(m[2]!==undefined){ const o=m[2].split("|"); parts.push({ans:o[0], choice:[...o].sort((a,b)=>a.localeCompare(b))}); }
+    else { const [ans,hint]=m[1].split("::"); parts.push({ans,hint}); }
+    last=re.lastIndex; }
+  parts.push({txt:t.slice(last)}); return parts;
+}
+function parseErr(t){ // returns tokens [{w, wrong?, fix}]
+  return t.split(" ").map(w=>{ const m=w.match(/^\*(.+)\|(.+)\*(.*)$/); return m? {w:m[1]+m[3], err:true, fix:m[2]} : {w}; });
+}
+
+/* ---------- decorations ---------- */
+function sprig(cls=""){
+  let leaves=""; const pts=[[18,58,-40],[30,46,-20],[24,36,-60],[42,32,-10],[36,20,-50],[54,16,5]];
+  pts.forEach(([x,y,r],i)=>{ leaves+=`<path d="M0 0C6-7 16-7 22 0C16 7 6 7 0 0Z" transform="translate(${x} ${y}) rotate(${r})" fill="var(${i%2?"--leaf2":"--leaf1"})"/>`; });
+  return `<svg class="sprig ${cls}" viewBox="0 0 80 72" aria-hidden="true"><path d="M6 70C20 52 38 30 62 14" stroke="var(--stem)" stroke-width="2.4" fill="none" stroke-linecap="round"/>${leaves}</svg>`;
+}
+const tipHTML = p => `<div class="tip"><div class="lab">Запомни!</div><ul>${p.tip.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;
+const profHTML = p => p.profile? `<div class="profile"><div class="ava">${p.profile.name.replace(/'s.*$/,"").split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase()}</div><div><h3>${p.profile.name}</h3><ul>${p.profile.lines.map(l=>`<li>${l}</li>`).join("")}</ul></div></div>`:"";
+const instr = pt => `<div class="plab">${pt.label?`<div class="pl">${pt.label}</div>`:""}<div class="instr"><b>${pt.ru}</b><i>${pt.en}</i></div></div>`;
+
+/* ================= INTERACTIVE ================= */
+function renderInteractive(){
+  const app=$("#app");
+  app.innerHTML = `<header class="hero">${sprig()}<div><h1>${D.title}</h1><div class="sub">${D.subtitle}</div></div>${sprig("r")}</header>
+  <nav class="tabs" aria-label="Страницы">${D.pages.map(p=>`<button type="button" data-p="${p.n}"><span class="num">${p.n}</span><span>${p.title.replace("ОГЭ-формат: ","ОГЭ · ")}</span><span class="sc" id="sc${p.n}"></span></button>`).join("")}</nav>
+  <main id="view"></main><div class="foot">© Чемоданчик учителя английского</div>`;
+  app.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(+b.dataset.p,true));
+  let start=1; const h=(location.hash||"").replace("#p",""); if(+h>=1&&+h<=10) start=+h;
+  show(start,false);
+}
+const state={}; // per page: saved html? keep DOM per page
+const views={};
+function show(n,scroll){
+  const view=$("#view");
+  if(!views[n]) views[n]=buildPage(D.pages[n-1]);
+  view.replaceChildren(views[n]);
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-current",+b.dataset.p===n?"true":"false"));
+  const cur=document.querySelector(`nav.tabs button[data-p="${n}"]`); if(cur) cur.scrollIntoView({block:"nearest",inline:"center"});
+  try{ history.replaceState(null,"","#p"+n);}catch(e){}
+  if(scroll) view.scrollIntoView({block:"start"});
+}
+let uid=0;
+function buildPage(p){
+  const el=document.createElement("section"); el.className="sheet";
+  let h=`<div class="phead"><div class="circle">${p.n}</div><div><h2>${p.title}</h2><div class="ru">${p.ru}</div></div></div>${profHTML(p)}${tipHTML(p)}`;
+  p.parts.forEach((pt,pi)=>{ h+=`<div class="part">${instr(pt)}${partI(pt,p.n,pi)}</div>`; });
+  h+=`<div class="actions"><button class="btn main" data-a="check">Проверить</button><button class="btn" data-a="show">Показать ответы</button><button class="btn" data-a="reset">Начать заново</button><span class="score" aria-live="polite"></span></div>`;
+  el.innerHTML=h;
+  // error-token interactions
+  el.querySelectorAll(".eitem").forEach(li=>{
+    const fix=li.querySelector(".efix"), inp=fix.querySelector("input");
+    li.querySelectorAll(".tok").forEach(t=>t.onclick=()=>{ li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); li.querySelector(".none").classList.remove("on"); t.classList.add("sel"); li.dataset.pick=t.dataset.i; fix.hidden=false; inp.focus(); clearMark(li); });
+    li.querySelector(".none").onclick=(e)=>{ li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); e.currentTarget.classList.add("on"); li.dataset.pick="none"; fix.hidden=true; clearMark(li); };
+  });
+  el.querySelector('[data-a="check"]').onclick=()=>check(el,p,false);
+  el.querySelector('[data-a="show"]').onclick=()=>check(el,p,true);
+  el.querySelector('[data-a="reset"]').onclick=()=>{ delete views[p.n]; $("#sc"+p.n).textContent=""; show(p.n,false); };
+  return el;
+}
+function clearMark(li){ li.classList.remove("ok","bad"); const m=li.querySelector(".model"); if(m) m.remove(); }
+function gapInput(ans){ const w=Math.max(4, Math.max(...accepted(ans).map(a=>a.length))+2); return `<input class="gap" id="g${++uid}" data-ans="${esc(ans)}" style="width:${w}ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="ответ">`; }
+function choiceSel(x){ return `<select class="gap choice" id="c${++uid}" data-ans="${esc(x.ans)}" aria-label="выбор"><option value="">…</option>${x.choice.map(o=>`<option>${esc(o)}</option>`).join("")}</select>`; }
+function gapLine(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : x.choice? choiceSel(x) : gapInput(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function partI(pt){
+  if(pt.type==="gaps"){
+    return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+
+      `<ol class="items ${pt.cols===4?"grid4":""}">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${gapLine(t)}</span></li>`).join("")}</ol>`;
+  }
+  if(pt.type==="full"||pt.type==="translate"){
+    return `<ol class="items">${pt.items.map((it,i)=>`<li class="fitem" data-kind="${pt.type}"><span class="n">${i+1}</span><div class="c"><div>${it.p}${it.cue?` <span class="cue">(${it.cue})</span>`:""}</div><input class="full" id="f${++uid}" data-acc='${esc(JSON.stringify(it.a)).replace(/'/g,"&#39;")}' autocomplete="off" autocapitalize="sentences" spellcheck="false" aria-label="ответ"></div></li>`).join("")}</ol>`;
+  }
+  if(pt.type==="errors"){
+    return `<ol class="items">${pt.items.map((t,i)=>{ const toks=parseErr(t); const ei=toks.findIndex(x=>x.err); const fix=ei>=0?toks[ei].fix:"";
+      return `<li class="eitem" data-err="${ei}" data-fix="${esc(fix)}"><span class="n">${i+1}</span><div class="c"><div>${toks.map((x,j)=>`<button type="button" class="tok" data-i="${j}">${esc(x.w)}</button>`).join(" ")}</div><div class="erow"><button type="button" class="small none">Ошибки нет</button><span class="efix" hidden>→ <input class="gap" id="e${++uid}" style="width:12ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="исправление"></span></div></div></li>`; }).join("")}</ol>`;
+  }
+  if(pt.type==="scale"){
+    const opts=`<option value="">—</option>`+pt.words.map(w=>`<option>${w}</option>`).join("");
+    return `<div class="bar"></div><div class="scale">${pt.marks.map((m,i)=>`<div class="slot"><span class="pct">${m}</span><select id="s${++uid}" data-ans="${pt.words[i]}" aria-label="${m}">${opts}</select></div>`).join("")}</div>`;
+  }
+  if(pt.type==="oge"){
+    return `<div class="oge">${pt.items.map((it,i)=>`<div class="row"><span>${gapLine(it.t)}</span><span class="w">${it.w}</span></div>`).join("")}</div>`;
+  }
+  if(pt.type==="survey"){
+    return `<ul class="survey">${pt.items.map(x=>`<li>How often do you ${x.replace("…","")}</li>`).join("")}</ul><p class="hint" style="white-space:normal">Это задание для работы в паре, оно не проверяется автоматически.</p>`;
+  }
+  return "";
+}
+function check(el,p,reveal){
+  let ok=0,total=0;
+  el.querySelectorAll("input.gap[data-ans], select[data-ans]").forEach(inp=>{
+    total++; if(reveal){ inp.value = inp.tagName==="SELECT"? inp.dataset.ans : first(inp.dataset.ans); }
+    const good = inp.tagName==="SELECT"? inp.value===inp.dataset.ans : matches(inp.value,inp.dataset.ans);
+    inp.classList.toggle("ok",good); inp.classList.toggle("bad",!good && inp.value.trim()!=="" ); if(good) ok++;
+  });
+  el.querySelectorAll(".fitem").forEach(li=>{
+    total++; const inp=li.querySelector("input"); const acc=JSON.parse(inp.dataset.acc); const model=first(acc[0]);
+    const old=li.querySelector(".model"); if(old) old.remove();
+    if(reveal) inp.value=model;
+    const good=matches(inp.value,acc);
+    inp.classList.remove("ok","bad","soft");
+    if(good){ inp.classList.add("ok"); ok++; }
+    else if(inp.value.trim()){
+      const soft = li.dataset.kind==="translate";
+      inp.classList.add(soft?"soft":"bad");
+      const m=document.createElement("div"); m.className="model"; m.textContent=(soft?"Сравните с образцом: ":"Правильно: ")+model; inp.after(m);
+    }
+  });
+  el.querySelectorAll(".eitem").forEach(li=>{
+    total++; const err=+li.dataset.err, fix=li.dataset.fix, inp=li.querySelector(".efix input");
+    if(reveal){
+      li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); li.querySelector(".none").classList.remove("on");
+      if(err<0){ li.dataset.pick="none"; li.querySelector(".none").classList.add("on"); li.querySelector(".efix").hidden=true; }
+      else { li.dataset.pick=String(err); li.querySelector(`.tok[data-i="${err}"]`).classList.add("sel"); li.querySelector(".efix").hidden=false; inp.value= fix==="—"?"— (убрать слово)":fix; }
+    }
+    const pick=li.dataset.pick; let good=false;
+    if(pick===undefined){ li.classList.remove("ok","bad"); return; }
+    if(err<0) good = pick==="none";
+    else if(pick===String(err)){ const v=inp.value.trim(); good = fix==="—"? (/^(|убрать.*|удалить.*|delete|remove|нет|ничего)$/i.test(v.replace(/[—–\-()]/g,"").trim())) : matches(v,fix); }
+    const n=li.querySelector(".n"); n.classList.toggle("ok",good); n.classList.toggle("bad",!good);
+    inp.classList.toggle("ok",good && err>=0); inp.classList.toggle("bad",!good && pick!=="none");
+    if(good) ok++;
+  });
+  const s=el.querySelector(".score"); s.textContent = reveal? "Ответы показаны" : `${ok} / ${total}`;
+  if(!reveal) $("#sc"+p.n).textContent=`${ok}/${total}`;
+}
+
+/* ================= PRINT ================= */
+function bl(ans,extra=0){ const L=Math.max(...accepted(ans).map(a=>a.length)); return `<span class="blank" style="width:${Math.max(4,L*0.62+1.6+extra)}em"></span>`; }
+function gapP(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : x.choice? `<span class="chp">(${x.choice.join(" / ")})</span>` : bl(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function partP(pt){
+  if(pt.type==="gaps") return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+`<ol class="items ${pt.cols===4?"grid4":""}">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${gapP(t)}</span></li>`).join("")}</ol>`;
+  if(pt.type==="full"||pt.type==="translate") return `<ol class="items fl">${pt.items.map((it,i)=>{ const L=first(it.a[0]).length; const lines=L>52?2:1;
+     const plen=(it.p+(it.cue||"")).replace(/<[^>]+>/g,"").length; const row=plen<=50;
+     return `<li class="${row?"rowl":""}"><span class="n">${i+1}</span><div class="c"><div class="pp">${it.p}${it.cue?` <span class="cue">(${it.cue})</span>`:""}</div><div class="ll">${'<div class="wline"></div>'.repeat(lines)}</div></div></li>`; }).join("")}</ol>`;
+  if(pt.type==="errors") return `<ol class="items">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${esc(parseErr(t).map(x=>x.w).join(" "))}</span><span class="blank" style="width:7.5em;flex:none"></span></li>`).join("")}</ol>`;
+  if(pt.type==="scale"){ const sh=[...pt.words].sort(); return `<div class="bank">${sh.map(w=>`<span>${w}</span>`).join("")}</div><div class="scale">${pt.marks.map(m=>`<div class="slot"><span class="pct">${m}</span><div class="box"></div></div>`).join("")}</div>`; }
+  if(pt.type==="oge") return `<div class="oge">${pt.items.map((it,i)=>`<div class="row"><span>${gapP(it.t)}</span><span class="w">${it.w}</span></div>`).join("")}</div>`;
+  if(pt.type==="survey") return `<table class="sv"><tr><th>How often do you…</th>${pt.items.slice(0,3).map(x=>`<td>${x}</td>`).join("")}</tr><tr><th>How often do you…</th>${pt.items.slice(3).map(x=>`<td>${x}</td>`).join("")}</tr></table>`;
+  return "";
+}
+function keyFor(pt){
+  if(pt.type==="gaps") return pt.items.map(t=>parseGaps(t).filter(x=>x.ans).map(x=>first(x.ans)).join(" … "));
+  if(pt.type==="oge") return pt.items.map(it=>parseGaps(it.t).filter(x=>x.ans).map(x=>first(x.ans)).join(" … "));
+  if(pt.type==="full"||pt.type==="translate") return pt.items.map(it=>first(it.a[0]));
+  if(pt.type==="errors") return pt.items.map(t=>{ const x=parseErr(t).find(z=>z.err); return x? (x.fix==="—"? `убрать <i>${x.w}</i>: I never eat fast food.` : `${x.w} → <b>${x.fix}</b>`) : "✓ ошибки нет"; });
+  if(pt.type==="scale") return [pt.words.join(" → ")];
+  return null;
+}
+function renderPrint(){
+  document.body.classList.add("print");
+  let h="";
+  D.pages.forEach(p=>{
+    h+=`<section class="ps"><div class="top"><span><b>${D.title}</b> · ${p.n} / ${D.pages.length}</span><span>Name ________________________ &nbsp; Date __________</span></div>${sprig()}
+    <div class="phead"><div class="circle">${p.n}</div><div><h2>${p.title}</h2><div class="ru">${p.ru}</div></div></div>${profHTML(p)}${tipHTML(p)}`;
+    p.parts.forEach(pt=>{ h+=`<div class="part">${instr(pt)}${partP(pt)}</div>`; });
+    h+=`<div class="pfoot"><span>© Чемоданчик учителя английского</span><span>${p.n}</span></div></section>`;
+  });
+  // keys
+  let k=""; D.pages.forEach(p=>{ k+=`<div class="kp"><h4>${p.n}. ${p.title}</h4>`; p.parts.forEach(pt=>{ const ks=keyFor(pt); if(!ks) return; k+=(pt.label?`<div class="kl">${pt.label}</div>`:"")+(pt.type==="scale"?`<div>${ks[0]}</div>`:`<ol>${ks.map(x=>`<li>${x}</li>`).join("")}</ol>`); }); k+=`</div>`; });
+  h+=`<section class="ps"><div class="top"><span><b>${D.title}</b> · Ключи</span><span>для учителя</span></div><div class="phead"><div class="circle">✓</div><div><h2>Answer Key</h2><div class="ru">Ключи ко всем страницам. В заданиях на перевод возможны и другие верные варианты.</div></div></div><div class="keys" style="margin-top:4mm">${k}</div><div class="pfoot"><span>© Чемоданчик учителя английского</span><span></span></div></section>`;
+  $("#app").innerHTML=h;
+}
+PRINT? renderPrint() : renderInteractive();
+window.__PS = {expand,norm,accepted,matches,first,parseGaps,parseErr};
+})();
+</script>
+</html>

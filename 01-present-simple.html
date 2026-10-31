@@ -59,6 +59,8 @@ ol.items>li .c{min-width:0;flex:1}
 ol.grid4{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:640px){ol.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 input.gap{font:inherit;color:var(--ink);background:var(--card);border:none;border-bottom:2px solid var(--green);border-radius:6px 6px 0 0;padding:1px 6px;margin:2px 2px;max-width:100%}
+select.gap{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:8px;padding:1px 4px;margin:2px}
+.chp{font-weight:700;color:#1e5a26;white-space:nowrap}
 input.full{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:6px 10px;width:100%;margin-top:6px}
 .hint{color:var(--muted);font-size:16px;white-space:nowrap}
 .cue{color:var(--green);font-weight:700}
@@ -490,11 +492,15 @@ function accepted(spec){ // spec: string with " / " alternatives or array
   const out=[]; list.forEach(a=>expand(a).forEach(x=>out.push(x))); return out;
 }
 function first(spec){ return accepted(spec)[0].replace(/\s+/g," ").replace(/ ([.,?!])/g,"$1").trim(); }
-function matches(val,spec){ const v=norm(val); if(!v) return false; return accepted(spec).some(a=>norm(a)===v); }
+const ZERO=s=>/^\s*[-—–0xхø]\s*$/i.test(s)?"zero":s;
+function matches(val,spec){ val=ZERO(val); spec=(Array.isArray(spec)?spec:spec.split(" / ")).map(ZERO); const v=norm(val); if(!v) return false; return accepted(spec).some(a=>norm(a)===v); }
 // gap text parsing: [[answer::hint]]
 function parseGaps(t){
-  const parts=[]; let last=0; const re=/\[\[(.+?)\]\]/g; let m;
-  while((m=re.exec(t))){ parts.push({txt:t.slice(last,m.index)}); const [ans,hint]=m[1].split("::"); parts.push({ans,hint}); last=re.lastIndex; }
+  const parts=[]; let last=0; const re=/\[\[(.+?)\]\]|\{\{(.+?)\}\}/g; let m;
+  while((m=re.exec(t))){ parts.push({txt:t.slice(last,m.index)});
+    if(m[2]!==undefined){ const o=m[2].split("|"); parts.push({ans:o[0], choice:[...o].sort((a,b)=>a.localeCompare(b))}); }
+    else { const [ans,hint]=m[1].split("::"); parts.push({ans,hint}); }
+    last=re.lastIndex; }
   parts.push({txt:t.slice(last)}); return parts;
 }
 function parseErr(t){ // returns tokens [{w, wrong?, fix}]
@@ -552,7 +558,8 @@ function buildPage(p){
 }
 function clearMark(li){ li.classList.remove("ok","bad"); const m=li.querySelector(".model"); if(m) m.remove(); }
 function gapInput(ans){ const w=Math.max(4, Math.max(...accepted(ans).map(a=>a.length))+2); return `<input class="gap" id="g${++uid}" data-ans="${esc(ans)}" style="width:${w}ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="ответ">`; }
-function gapLine(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : gapInput(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function choiceSel(x){ return `<select class="gap choice" id="c${++uid}" data-ans="${esc(x.ans)}" aria-label="выбор"><option value="">…</option>${x.choice.map(o=>`<option>${esc(o)}</option>`).join("")}</select>`; }
+function gapLine(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : x.choice? choiceSel(x) : gapInput(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
 function partI(pt){
   if(pt.type==="gaps"){
     return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+
@@ -618,7 +625,7 @@ function check(el,p,reveal){
 
 /* ================= PRINT ================= */
 function bl(ans,extra=0){ const L=Math.max(...accepted(ans).map(a=>a.length)); return `<span class="blank" style="width:${Math.max(4,L*0.62+1.6+extra)}em"></span>`; }
-function gapP(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : bl(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function gapP(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : x.choice? `<span class="chp">(${x.choice.join(" / ")})</span>` : bl(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
 function partP(pt){
   if(pt.type==="gaps") return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+`<ol class="items ${pt.cols===4?"grid4":""}">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${gapP(t)}</span></li>`).join("")}</ol>`;
   if(pt.type==="full"||pt.type==="translate") return `<ol class="items fl">${pt.items.map((it,i)=>{ const L=first(it.a[0]).length; const lines=L>52?2:1;
