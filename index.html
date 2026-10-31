@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ОГЭ Грамматика — Чемоданчик</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@700;800;900&family=PT+Sans+Narrow:wght@400;700&display=swap">
+<style>
+:root{--paper:#f6faf1;--card:#fff;--ink:#1c3520;--muted:#5b7360;--green:#2f7d32;--deep:#1e5a26;--plaque:#e3f0d6;--line:#bcd9a9;--butter:#fbf0c4;
+--display:"Nunito",system-ui,sans-serif;--body:"PT Sans Narrow","Arial Narrow",sans-serif;--hand:"Caveat",cursive}
+@media (prefers-color-scheme:dark){:root{--paper:#132016;--card:#1a2a1d;--ink:#e4efe0;--muted:#9bb39f;--green:#7cc47f;--deep:#a6dca5;--plaque:#223826;--line:#36573c;--butter:#3a3520;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 48px}
+h1{font-family:var(--display);font-weight:900;color:var(--deep);font-size:clamp(34px,7vw,54px);line-height:1.05;margin:0}
+.sub{color:var(--muted);margin-top:8px}
+.note{background:var(--butter);border-radius:14px;padding:12px 16px;margin:22px 0 26px}
+.note b{font-family:var(--hand);font-size:24px;color:var(--deep);display:block;line-height:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{display:flex;gap:14px;align-items:center;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.card:hover,.card:focus-visible{border-color:var(--green);background:var(--plaque);outline:none}
+.num{width:46px;height:46px;border-radius:50%;background:var(--green);color:var(--card);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:19px;flex:none}
+.card h2{font-family:var(--display);font-weight:800;font-size:21px;margin:0;color:var(--deep)}
+.card span{color:var(--muted);font-size:16px}
+.card .pdf{margin-left:auto;font-family:var(--display);font-weight:800;font-size:13px;color:var(--deep);background:var(--plaque);border-radius:999px;padding:3px 10px;text-decoration:none;flex:none}
+.foot{text-align:center;color:var(--muted);font-size:15px;margin-top:32px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>ОГЭ: Грамматика</h1>
+  <div class="sub">Интерактивные упражнения с проверкой ответов · уровень B1–B1+</div>
+  <div class="note"><b>Как работать</b>Выберите тему. В каждой — 10 страниц: правила «Запомни!», задания разных типов и тексты в формате ОГЭ. Нажмите «Проверить», чтобы увидеть результат.</div>
+  <div class="grid" id="list"></div>
+  <div class="foot">© Чемоданчик учителя английского</div>
+</div>
+<script>
+const T=[["01","present-simple","Present Simple","Настоящее простое"],["02","past-continuous","Past Continuous","Прошедшее длительное"],["03","to-be","The verb to be","Глагол to be, there is / are"],["04","auxiliary-verbs","Auxiliary Verbs","Вспомогательные глаголы"],["05","past-simple","Past Simple","Прошедшее простое"],["06","present-continuous","Present Continuous","Настоящее длительное"]];
+document.getElementById("list").innerHTML=T.map(([n,s,t,r])=>`<a class="card" href="${n}-${s}.html"><div class="num">${n}</div><div><h2>${t}</h2><span>${r}</span></div></a>`).join("");
+</script>
+</body>
+</html>

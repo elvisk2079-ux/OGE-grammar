@@ -1,0 +1,607 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Past Continuous — ОГЭ грамматика</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@700;800;900&family=PT+Sans+Narrow:wght@400;700&display=swap">
+<style>
+/* Layout: brand "mind map" sheet — green plaques, numbered circles, leaf sprigs; one exercise set per view */
+:root{
+  --paper:#f6faf1; --card:#ffffff; --ink:#1c3520; --muted:#5b7360;
+  --green:#2f7d32; --deep:#1e5a26; --plaque:#e3f0d6; --line:#bcd9a9; --butter:#fbf0c4;
+  --ok:#2e7d32; --ok-bg:#dcefd4; --bad:#b3261e; --bad-bg:#fbe2df; --soft:#8a5a00; --soft-bg:#fff1c7;
+  --leaf1:#5aa340; --leaf2:#86c25a; --stem:#6b8f3a;
+  --display:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --body:"PT Sans Narrow","Arial Narrow","Roboto Condensed",sans-serif;
+  --hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#132016; --card:#1a2a1d; --ink:#e4efe0; --muted:#9bb39f;
+  --green:#7cc47f; --deep:#a6dca5; --plaque:#223826; --line:#36573c; --butter:#3a3520;
+  --ok:#8fd68f; --ok-bg:#1f3a22; --bad:#ff8a80; --bad-bg:#3d1f1d; --soft:#f2c35b; --soft-bg:#3a3018;
+  --leaf1:#4f8f3a; --leaf2:#6fae4e; --stem:#5d7f34; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#132016; --card:#1a2a1d; --ink:#e4efe0; --muted:#9bb39f;
+  --green:#7cc47f; --deep:#a6dca5; --plaque:#223826; --line:#36573c; --butter:#3a3520;
+  --ok:#8fd68f; --ok-bg:#1f3a22; --bad:#ff8a80; --bad-bg:#3d1f1d; --soft:#f2c35b; --soft-bg:#3a3018;
+  --leaf1:#4f8f3a; --leaf2:#6fae4e; --stem:#5d7f34; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.45}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+.hero{display:flex;align-items:center;justify-content:center;gap:12px;text-align:center}
+.hero h1{font-size:clamp(34px,7vw,56px);font-weight:900;color:var(--deep);letter-spacing:-.5px;line-height:1}
+.hero .sub{color:var(--muted);font-size:17px;margin-top:6px}
+.sprig{width:64px;height:auto;flex:none}
+.sprig.r{transform:scaleX(-1)}
+nav.tabs{display:flex;gap:8px;overflow-x:auto;padding:16px 2px 10px;scrollbar-width:thin}
+nav.tabs button{flex:none;font:inherit;font-size:16px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 14px 6px 6px;display:flex;align-items:center;gap:8px;cursor:pointer}
+nav.tabs button .num{width:28px;height:28px;border-radius:50%;background:var(--plaque);color:var(--deep);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:15px}
+nav.tabs button[aria-current="true"]{border-color:var(--green);background:var(--plaque)}
+nav.tabs button[aria-current="true"] .num{background:var(--green);color:var(--card)}
+nav.tabs button .sc{font-size:14px;color:var(--ok);font-weight:700}
+nav.tabs button:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.sheet{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:22px clamp(14px,3vw,30px) 26px;position:relative}
+.phead{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.circle{width:52px;height:52px;border-radius:50%;background:var(--green);color:var(--card);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:26px;flex:none}
+.phead h2{font-size:clamp(24px,4.4vw,34px);color:var(--deep);font-weight:900;line-height:1.1}
+.phead .ru{color:var(--muted);font-size:18px}
+.tip{background:var(--butter);border-radius:14px;padding:12px 16px;margin:14px 0 6px}
+.tip .lab{font-family:var(--hand);font-size:26px;color:var(--deep);line-height:1}
+.tip ul{margin:4px 0 0;padding-left:20px}
+.tip li{margin:2px 0}
+.part{margin-top:24px}
+.plab{display:flex;align-items:flex-start;gap:10px}
+.pl{width:34px;height:34px;border-radius:50%;background:var(--plaque);color:var(--deep);border:2px solid var(--green);display:grid;place-items:center;font-family:var(--display);font-weight:900;flex:none}
+.instr b{display:block;font-weight:700}
+.instr i{color:var(--muted);font-size:16px}
+ol.items{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+ol.items>li{display:flex;gap:10px;align-items:baseline;background:var(--paper);border-radius:12px;padding:8px 12px;min-width:0}
+ol.items>li .n{font-family:var(--display);font-weight:800;color:var(--green);min-width:1.6em;flex:none}
+ol.items>li .c{min-width:0;flex:1}
+ol.grid4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:640px){ol.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+input.gap{font:inherit;color:var(--ink);background:var(--card);border:none;border-bottom:2px solid var(--green);border-radius:6px 6px 0 0;padding:1px 6px;margin:2px 2px;max-width:100%}
+input.full{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:6px 10px;width:100%;margin-top:6px}
+.hint{color:var(--muted);font-size:16px;white-space:nowrap}
+.cue{color:var(--green);font-weight:700}
+.ok{background:var(--ok-bg)!important;border-color:var(--ok)!important;color:var(--ok)!important}
+.bad{background:var(--bad-bg)!important;border-color:var(--bad)!important;color:var(--bad)!important}
+.soft{background:var(--soft-bg)!important;border-color:var(--soft)!important}
+.model{font-size:16px;color:var(--soft);margin-top:4px}
+.model.okm{color:var(--ok)}
+.bank{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.bank span{background:var(--plaque);border-radius:999px;padding:2px 12px;font-size:17px}
+.tok{font:inherit;color:var(--ink);background:none;border:none;border-radius:6px;padding:1px 3px;margin:0 -1px;cursor:pointer}
+.tok:hover{background:var(--plaque)}
+.tok.sel{background:var(--butter);outline:2px solid var(--soft)}
+.erow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.small{font:inherit;font-size:15px;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:2px 12px;cursor:pointer}
+.small.on{background:var(--plaque);border-color:var(--green)}
+.scale{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:12px}
+.scale .slot{display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--paper);border-radius:12px;padding:8px 4px}
+.scale .pct{font-family:var(--display);font-weight:800;color:var(--green);font-size:15px}
+.scale select{font:inherit;font-size:15px;width:100%;border:2px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);padding:3px}
+.bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--green),var(--line));margin-top:8px}
+@media (max-width:640px){.scale{grid-template-columns:repeat(2,minmax(0,1fr))}.bar{display:none}}
+.profile{display:flex;gap:16px;background:var(--plaque);border-radius:16px;padding:14px 16px;margin-top:12px}
+.profile .ava{width:64px;height:64px;border-radius:50%;background:var(--card);border:3px solid var(--green);display:grid;place-items:center;font-family:var(--display);font-weight:900;color:var(--deep);font-size:24px;flex:none}
+.profile h3{color:var(--deep);font-size:22px}
+.profile ul{margin:4px 0 0;padding-left:18px}
+.oge{margin-top:12px;border:2px solid var(--line);border-radius:14px;overflow:hidden}
+.oge .row{display:grid;grid-template-columns:minmax(0,1fr) 9.5em;border-top:1px solid var(--line);align-items:baseline}
+.oge .row:first-child{border-top:none}
+.oge .row>*{padding:8px 10px}
+.oge .on{font-family:var(--display);font-weight:800;color:var(--green)}
+.oge .w{font-family:var(--display);font-weight:800;color:var(--deep);background:var(--plaque);align-self:stretch;letter-spacing:.5px;font-size:15px;display:flex;align-items:center}
+.survey{list-style:disc;margin:8px 0 0 24px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:26px}
+.btn{font:inherit;font-family:var(--display);font-weight:800;font-size:17px;border-radius:999px;padding:9px 20px;border:2px solid var(--green);cursor:pointer;background:var(--card);color:var(--deep)}
+.btn.main{background:var(--green);color:var(--card)}
+.score{font-family:var(--display);font-weight:900;font-size:20px;color:var(--deep);margin-left:auto}
+.foot{text-align:center;color:var(--muted);font-size:15px;margin-top:22px}
+@media (prefers-reduced-motion:no-preference){.btn,.small,nav.tabs button{transition:background .15s,border-color .15s}}
+
+/* ---------- PRINT MODE ---------- */
+body.print{font-size:10.8pt;background:#fff;color:#1c3520}
+body.print .wrap{max-width:none;padding:0}
+.ps{width:210mm;height:297mm;overflow:hidden;padding:9mm 12mm 13mm;position:relative;break-after:page;display:flex;flex-direction:column}
+.ps:last-child{break-after:auto}
+.ps .top{display:flex;justify-content:space-between;align-items:flex-end;font-size:10pt;color:#5b7360;border-bottom:1.5px solid #bcd9a9;padding-bottom:3px}
+.ps .top b{font-family:var(--display);color:#1e5a26;font-size:11pt}
+.ps .phead{margin-top:3mm}
+.ps .circle{width:13mm;height:13mm;font-size:19pt}
+.ps .phead h2{font-size:21pt}
+.ps .phead .ru{font-size:12pt}
+.ps .sprig{position:absolute;top:13mm;right:12mm;width:22mm}
+.ps .tip{padding:2.4mm 4mm;margin:3mm 0 0;font-size:10.6pt}
+.ps .tip .lab{font-size:17pt}
+.ps .part{margin-top:3.4mm}
+.ps .pl{width:8mm;height:8mm;font-size:11pt}
+.ps .instr i{font-size:9.5pt}
+.ps ol.items{gap:1.8mm;margin-top:2.6mm}
+.ps ol.items>li{padding:1.4mm 3mm;border-radius:2.5mm}
+.blank{display:inline-block;border-bottom:1.3px solid #1c3520;margin:0 2px;height:1.05em;vertical-align:baseline}
+.wline{border-bottom:1.1px solid #8fb07a;height:8.4mm}
+.ps .hint{font-size:10pt}
+.ps .scale .slot{padding:2mm 1mm}
+.ps .scale .box{height:7mm;width:100%;border-bottom:1.3px solid #1c3520}
+.ps .oge .row>*{padding:1.9mm 3mm}
+.ps .oge .row{grid-template-columns:minmax(0,1fr) 40mm}
+.ps table.sv{width:100%;border-collapse:collapse;margin-top:2.5mm;font-size:10.6pt}
+.ps table.sv td,.ps table.sv th{border:1px solid #bcd9a9;padding:1.5mm 3mm;text-align:left}
+.ps table.sv th{background:#e3f0d6;font-family:var(--display)}
+.ps .pfoot{position:absolute;left:12mm;right:12mm;bottom:6mm;display:flex;justify-content:space-between;font-size:9pt;color:#5b7360}
+.ps .profile{padding:3mm 4mm;margin-top:3mm;font-size:10.6pt}
+.ps .profile .ava{width:14mm;height:14mm;font-size:15pt}
+.ps .profile ul{columns:2;column-gap:6mm}
+
+.keys .kp{break-inside:avoid;margin-bottom:3.5mm}
+.keys h4{font-family:var(--display);color:#1e5a26;font-size:11pt;margin:0 0 1mm}
+.keys ol{margin:0;padding-left:6mm}
+.keys .kl{font-weight:700;color:#2f7d32}
+.ps ol.fl{gap:.6mm}
+.ps ol.fl>li{background:none;padding:.6mm 1mm;border-bottom:none}
+.ps ol.fl>li .c{display:block}
+.ps ol.fl>li.rowl .c{display:grid;grid-template-columns:78mm minmax(0,1fr);gap:3mm;align-items:end}
+.ps ol.fl>li.rowl .pp{padding-bottom:1mm}
+.ps .wline{height:6.7mm}
+.ps ol.grid4 .blank{width:4.6em!important}
+.ps ol.grid4>li .c{white-space:nowrap}
+.ps ol.grid4>li{padding:1.6mm 2mm}
+.keys{columns:3;column-gap:6mm;font-size:7.7pt;line-height:1.2}
+@page{size:A4;margin:0}
+</style>
+<div class="wrap backbar" style="padding-block:14px 0"><a href="index.html" style="color:var(--deep);font-family:var(--display);font-weight:800;text-decoration:none">← Все темы</a> &nbsp;·&nbsp; <a href="pdf/02-past-continuous.pdf" style="color:var(--deep);font-family:var(--display);font-weight:800;text-decoration:none">PDF для печати</a></div><div class="wrap" id="app"></div>
+<script>window.PS_DATA = {
+  title: "Past Continuous",
+  subtitle: "10 страниц практики · уровень B1–B1+ · подготовка к ОГЭ",
+  pages: [
+  /* 1 */
+  {
+    n: 1, title: "Forms First", ru: "was / were + V-ing и правописание -ing",
+    tip: [
+      "I / he / she / it + <b>was</b> + V-ing · we / you / they + <b>were</b> + V-ing",
+      "-e выпадает: write → writ<b>ing</b>; -ie → -y: lie → l<b>ying</b>",
+      "ударный слог: гласная + согласная → удвоение: sit → si<b>tt</b>ing; но visit → visiting"
+    ],
+    parts: [
+      { type: "gaps", label: "A", ru: "Напишите форму -ing.", en: "Write the -ing form.", cols: 4,
+        items: [
+          "sit → [[sitting]]", "write → [[writing]]", "lie → [[lying]]", "swim → [[swimming]]",
+          "begin → [[beginning]]", "visit → [[visiting]]", "die → [[dying]]", "make → [[making]]",
+          "run → [[running]]", "open → [[opening]]", "play → [[playing]]", "tie → [[tying]]",
+          "stop → [[stopping]]", "come → [[coming]]", "get → [[getting]]", "travel → [[travelling / traveling]]"
+        ] },
+      { type: "gaps", label: "B", ru: "was или were? Сначала найдите подлежащее.", en: "was or were?",
+        items: [
+          "At ten o'clock I [[was]] still sleeping.",
+          "My parents [[were]] watching the news.",
+          "Everybody in the room [[was]] laughing.",
+          "The police [[were]] looking for a white van.",
+          "My friend and I [[were]] waiting for the bus.",
+          "Nobody [[was]] listening to the teacher.",
+          "[[Were]] you working late yesterday?",
+          "It [[wasn't]] raining when we left the house."
+        ] }
+    ]
+  },
+  /* 2 */
+  {
+    n: 2, title: "8 p.m. Last Friday", ru: "Что делала семья Смит: раскройте скобки",
+    tip: [
+      "Past Continuous — действие, которое <b>длилось</b> в определённый момент в прошлом.",
+      "<b>−</b> wasn't / weren't + V-ing · <b>?</b> Was / Were + подлежащее + V-ing?",
+      "В вопросе и отрицании <b>не нужен did</b>!"
+    ],
+    parts: [
+      { type: "gaps", label: "", ru: "В пятницу в 8 вечера в доме Смитов пропал кот. Что в это время делал каждый? Раскройте скобки.", en: "Put the verbs in the Past Continuous.",
+        items: [
+          "At 8 p.m. last Friday Mr Smith [[was fixing::fix]] his bike in the garage.",
+          "Mrs Smith [[was talking::talk]] to her sister on the phone.",
+          "The twins, Ben and Lucy, [[were playing::play]] a video game.",
+          "They [[weren't doing::not / do]] their homework!",
+          "Grandma [[was sitting::sit]] in the kitchen and [[was making::make]] a pie.",
+          "\"[[Was::be]] anybody [[watching::watch]] the cat?\" asked Mrs Smith later.",
+          "\"No, we [[weren't]],\" said the twins.",
+          "\"Where [[was::be]] the cat [[sleeping::sleep]] when you came home?\"",
+          "In fact, the cat [[wasn't sleeping::not / sleep]] at all.",
+          "It [[was hiding::hide]] in Grandma's shopping bag and [[was eating::eat]] her sausages!"
+        ] }
+    ]
+  },
+  /* 3 */
+  {
+    n: 3, title: "Spot the Mistake", ru: "Найди и исправь ошибку",
+    tip: [
+      "В каждом предложении <b>не больше одной</b> ошибки. Два предложения правильные.",
+      "I / he / she / it — <b>was</b>, we / you / they — <b>were</b>.",
+      "Вопрос: <b>Were</b> you sleeping? (не Did you sleeping?)"
+    ],
+    parts: [
+      { type: "errors", label: "", ru: "Нажмите на неправильное слово и впишите правильный вариант. Если ошибки нет, нажмите «Ошибки нет».", en: "Find and correct the mistake. Two sentences are correct.",
+        items: [
+          "I was *watch|watching* TV when you called.",
+          "They *was|were* playing football at five o'clock.",
+          "*Did|Were* you sleeping when I phoned?",
+          "What *did|were* you doing at midnight?",
+          "She *wasn't|didn't* hear the phone because she was having a shower.",
+          "We were *swiming|swimming* in the lake all afternoon.",
+          "He was *siting|sitting* by the window.",
+          "The children were *play|playing* in the garden.",
+          "It was *rainning|raining* all day yesterday.",
+          "The sun was shining and the birds *was|were* singing.",
+          "What were you doing at seven o'clock?",
+          "While Dad was driving, we *was|were* singing songs.",
+          "I was reading when the phone rang.",
+          "I *were|was* doing my homework at 6 p.m."
+        ] }
+    ]
+  },
+  /* 4 */
+  {
+    n: 4, title: "The Night the Lights Went Out", ru: "Past Continuous или Past Simple?",
+    tip: [
+      "Длинное действие, фон → <b>Past Continuous</b>: I was reading…",
+      "Короткое действие, которое его прервало → <b>Past Simple</b>: …when the lights went out.",
+      "Действия одно за другим → только Past Simple: I got up, found a torch and went downstairs."
+    ],
+    parts: [
+      { type: "gaps", label: "", ru: "Раскройте скобки: Past Continuous или Past Simple.", en: "Past Continuous or Past Simple?",
+        items: [
+          "It was a cold, windy evening. The rain [[was falling::fall]] and the wind [[was blowing::blow]].",
+          "I [[was reading::read]] a horror story in my room when suddenly the lights [[went::go]] out.",
+          "I [[got::get]] up, [[found::find]] a torch and [[went::go]] downstairs.",
+          "While I [[was walking::walk]] down the stairs, I [[heard::hear]] a strange noise.",
+          "Somebody [[was knocking::knock]] at the back door!",
+          "I [[opened::open]] the door very slowly.",
+          "It was my neighbour, Mr Brown. He [[was holding::hold]] a big box of candles.",
+          "\"I [[saw::see]] that your lights were off,\" he [[said::say]], \"so I brought you these.\"",
+          "We [[were drinking::drink]] tea by candlelight when the lights [[came::come]] back on."
+        ] }
+    ]
+  },
+  /* 5 */
+  {
+    n: 5, title: "When or While?", ru: "Соедините предложения",
+    tip: [
+      "<b>when</b> + Past Simple (короткое действие): I was reading <b>when</b> the phone rang.",
+      "<b>while</b> + Past Continuous (длинное действие): <b>While</b> I was reading, the phone rang.",
+      "Два длинных действия одновременно: I was cooking <b>while</b> my sister was watching TV."
+    ],
+    parts: [
+      { type: "full", label: "", ru: "Соедините два предложения в одно с помощью слова в скобках. Одно действие поставьте в Past Continuous, другое — в Past Simple.", en: "Join the sentences.",
+        items: [
+          { p: "I had a bath. The phone rang.", cue: "when", a: ["I was having a bath when the phone rang.", "When the phone rang(,|) I was having a bath."] },
+          { p: "We walked in the park. It started to rain.", cue: "when", a: ["We were walking in the park when it started to rain.", "When it started to rain(,|) we were walking in the park."] },
+          { p: "She cooked dinner. She cut her finger.", cue: "while", a: ["While she was cooking dinner(,|) she cut her finger.", "She cut her finger while she was cooking dinner."] },
+          { p: "I waited for the bus. I met an old friend.", cue: "while", a: ["While I was waiting for the bus(,|) I met an old friend.", "I met an old friend while I was waiting for the bus."] },
+          { p: "Mum read a book. Dad washed the dishes.", cue: "while", a: ["Mum was reading a book while Dad was washing the dishes.", "While Mum was reading a book(,|) Dad was washing the dishes.", "Dad was washing the dishes while Mum was reading a book."] },
+          { p: "The teacher came in. We talked loudly.", cue: "when", a: ["We were talking loudly when the teacher came in.", "When the teacher came in(,|) we were talking loudly."] },
+          { p: "He played football. He broke his leg.", cue: "while", a: ["While he was playing football(,|) he broke his leg.", "He broke his leg while he was playing football."] },
+          { p: "They watched a film. The lights went out.", cue: "when", a: ["They were watching a film when the lights went out.", "When the lights went out(,|) they were watching a film."] }
+        ] }
+    ]
+  },
+  /* 6 */
+  {
+    n: 6, title: "Where Were You?", ru: "Допрос свидетеля: задайте вопросы",
+    tip: [
+      "Вопрос: <b>(Wh-слово) + was / were + подлежащее + V-ing?</b>",
+      "What <b>were</b> you <b>doing</b> at 9 p.m.? (не What did you doing)",
+      "Вопрос к подлежащему: <b>Who was singing</b>?"
+    ],
+    parts: [
+      { type: "full", label: "A", ru: "Вчера вечером из кафе «Луна» исчезла картина. Детектив допрашивает официантку Эмму. Напишите вопросы детектива к подчёркнутым словам.", en: "Write the detective's questions.",
+        items: [
+          { p: "At 9 p.m. I was <u>cleaning the tables</u>.", a: ["What were you doing at 9 p.m.?", "What were you doing at 9 p.m. yesterday?", "What were you doing?"] },
+          { p: "I was working <u>in the main hall</u>.", a: ["Where were you working?"] },
+          { p: "<u>Two students</u> were sitting by the window.", a: ["Who was sitting by the window?"] },
+          { p: "They were drinking <u>hot chocolate</u>.", a: ["What were they drinking?"] },
+          { p: "A man was waiting <u>for a taxi</u> outside.", a: ["What was (the|a) man waiting for (outside|)?", "Who was (the|a) man waiting for (outside|)?"] },
+          { p: "He was waiting <u>for about twenty minutes</u>.", a: ["How long was he waiting (for|)?"] },
+          { p: "No, I wasn't. I wasn't looking at the picture.", a: ["Were you looking at the picture?"] }
+        ] },
+      { type: "gaps", label: "B", ru: "Краткие ответы.", en: "Short answers.",
+        items: [
+          "Was Emma cleaning the tables? — Yes, [[she was]].",
+          "Were the students drinking coffee? — No, [[they weren't]].",
+          "Was it raining that evening? — No, [[it wasn't]].",
+          "Were you working that night? — Yes, [[I was]]."
+        ] }
+    ]
+  },
+  /* 7 */
+  {
+    n: 7, title: "Lost in Translation", ru: "Перевод предложений",
+    tip: [
+      "«Что ты делал вчера в 8?» → What <b>were</b> you <b>doing</b> at 8 yesterday?",
+      "«Я читал, когда позвонил брат» → I <b>was reading</b> when my brother <b>called</b>.",
+      "«пока» = <b>while</b>"
+    ],
+    parts: [
+      { type: "translate", label: "", ru: "Переведите на английский язык.", en: "Translate into English.",
+        items: [
+          { p: "Вчера в восемь вечера я делал уроки.", a: ["I was doing my homework at eight (o'clock|p.m.|in the evening) yesterday.", "Yesterday at eight (o'clock|p.m.|in the evening) I was doing my homework.", "At eight (o'clock|p.m.|in the evening) yesterday I was doing my homework.", "I was doing (my|) homework at (8|eight) (o'clock|p.m.|in the evening) yesterday."] },
+          { p: "Что ты делал, когда я тебе позвонил?", a: ["What were you doing when I (called|phoned|rang) you?"] },
+          { p: "Мы гуляли в парке, когда начался дождь.", a: ["We were walking in the park when it (started|began) to rain.", "We were walking in the park when it (started|began) raining."] },
+          { p: "Пока мама готовила ужин, папа смотрел телевизор.", a: ["While (Mum|Mom|my mum|mother|my mother) was cooking dinner(,|) (Dad|my dad|father|my father) was watching TV.", "While (Mum|Mom|my mum|mother|my mother) was making dinner(,|) (Dad|my dad|father|my father) was watching TV."] },
+          { p: "Они не слушали учителя.", a: ["They weren't listening to the teacher.", "They were not listening to the teacher."] },
+          { p: "Шёл снег, и дети играли во дворе.", a: ["It was snowing(,|) and the children were playing (in the yard|outside|in the garden).", "It was snowing(,|) and the kids were playing (in the yard|outside|in the garden)."] },
+          { p: "Ты спал, когда я пришёл домой?", a: ["Were you sleeping when I came home?", "Were you asleep when I came home?", "Were you sleeping when I got home?"] },
+          { p: "Кто играл на гитаре вчера вечером?", a: ["Who was playing the guitar (last night|yesterday evening)?"] },
+          { p: "Она упала, когда бежала к автобусу.", a: ["She fell (down|over|) when she was running (to|for) the bus.", "She fell (down|over|) while she was running (to|for) the bus."] },
+          { p: "В это время вчера мы летели в Москву.", a: ["(At this time|This time) yesterday we were flying to Moscow.", "We were flying to Moscow (at this time|this time) yesterday."] }
+        ] }
+    ]
+  },
+  /* 8 */
+  {
+    n: 8, title: "Story Openers", ru: "Начало рассказа: опишите обстановку",
+    tip: [
+      "Хороший рассказ начинается с <b>фона</b> — Past Continuous: <i>The sun was shining…</i>",
+      "Потом происходит <b>событие</b> — Past Simple: <i>Suddenly, I saw…</i>",
+      "Слова-сигналы события: suddenly, at that moment, all of a sudden"
+    ],
+    parts: [
+      { type: "gaps", label: "A", ru: "Раскройте скобки. Фон — Past Continuous, событие — Past Simple.", en: "Put the verbs in the correct form.",
+        items: [
+          "It was a beautiful summer morning. The sun [[was shining::shine]] and the birds [[were singing::sing]].",
+          "People [[were swimming::swim]] in the sea and children [[were building::build]] sandcastles.",
+          "I [[was lying::lie]] on the beach and [[was reading::read]] a magazine.",
+          "Suddenly, somebody [[shouted::shout]], \"Help!\"",
+          "A little boy [[was waving::wave]] his arms in the water.",
+          "A young man [[jumped::jump]] into the sea and [[swam::swim]] towards him.",
+          "A few minutes later, the boy [[was sitting::sit]] safely on the sand with his mum."
+        ] },
+      { type: "translate", label: "B", ru: "Переведите начало рассказа на английский язык.", en: "Translate the story opening.",
+        items: [
+          { p: "Был холодный зимний вечер.", a: ["It was a cold winter evening."] },
+          { p: "Шёл снег, и дул сильный ветер.", a: ["It was snowing(,|) and a strong wind was blowing.", "It was snowing(,|) and the wind was blowing hard.", "It was snowing(,|) and there was a strong wind."] },
+          { p: "Я шёл домой из школы, когда увидел маленького щенка.", a: ["I was walking home from school when I saw a (little|small) puppy.", "I was going home from school when I saw a (little|small) puppy."] }
+        ] }
+    ]
+  },
+  /* 9 */
+  {
+    n: 9, title: "ОГЭ-формат: A Lucky Mistake", ru: "Текст с пропусками в формате ОГЭ",
+    tip: [
+      "Прочитайте весь текст, потом заполняйте пропуски.",
+      "Здесь нужны разные формы: Past Continuous, Past Simple, а также другие части речи.",
+      "Длинное действие-фон → was / were + V-ing; короткое событие → Past Simple."
+    ],
+    parts: [
+      { type: "oge", label: "", ru: "Преобразуйте слова справа так, чтобы они грамматически соответствовали содержанию текста.", en: "Use the words on the right to complete the text.",
+        items: [
+          { t: "In 1928, a Scottish scientist called Alexander Fleming [[was studying]] bacteria in his laboratory in London.", w: "STUDY" },
+          { t: "He was not the [[tidiest]] scientist in the world — his desk was always a mess.", w: "TIDY" },
+          { t: "In summer, he went on holiday with his [[family]] and left some dishes with bacteria on the table.", w: "FAMILY" },
+          { t: "While he [[was relaxing]] by the sea, mould grew on one of the dishes.", w: "RELAX" },
+          { t: "When Fleming [[came]] back, he looked at the dish carefully.", w: "COME" },
+          { t: "Around the mould, the bacteria [[were dying]]!", w: "DIE" },
+          { t: "This was the [[first]] antibiotic in history. Fleming called it penicillin.", w: "ONE" },
+          { t: "At first, other scientists [[didn't understand]] how important it was.", w: "NOT UNDERSTAND" },
+          { t: "But years later, penicillin saved millions of [[lives]].", w: "LIFE" }
+        ] }
+    ]
+  },
+  /* 10 */
+  {
+    n: 10, title: "ОГЭ-формат: The Unexpected Guest", ru: "Текст с пропусками в формате ОГЭ",
+    tip: [
+      "Смотрите на подлежащее: <b>I / he / she / it — was</b>, <b>we / you / they — were</b>.",
+      "Местоимение справа тоже может меняться: WE → us / our / ourselves.",
+      "Будьте внимательны: в конце текста может понадобиться настоящее время!"
+    ],
+    parts: [
+      { type: "oge", label: "", ru: "Преобразуйте слова справа так, чтобы они грамматически соответствовали содержанию текста.", en: "Use the words on the right to complete the text.",
+        items: [
+          { t: "Last winter my family [[was spending]] a week in a small hotel in the mountains.", w: "SPEND" },
+          { t: "One evening, my brother and I [[were playing]] cards in the hall.", w: "PLAY" },
+          { t: "Our parents [[were sitting]] by the fire and chatting with other guests.", w: "SIT" },
+          { t: "Suddenly, the door opened and a huge dog [[ran]] into the room.", w: "RUN" },
+          { t: "It was covered in snow and [[its]] tail was wagging happily.", w: "IT" },
+          { t: "Nobody [[knew]] whose dog it was.", w: "KNOW" },
+          { t: "The dog came up to [[us]] and lay down at my feet.", w: "WE" },
+          { t: "The next morning we found out that the dog belonged to a farmer who lived three [[miles]] away.", w: "MILE" },
+          { t: "Now every winter we visit the farmer and his dog. It [[is]] our favourite holiday tradition.", w: "BE" }
+        ] }
+    ]
+  }
+  ]
+};
+</script>
+<script>
+(function(){
+const PRINT = false;
+const D = window.PS_DATA;
+const $ = (s,el=document)=>el.querySelector(s);
+const esc = s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+/* ---------- answer logic ---------- */
+function expand(s){
+  const m = s.match(/\(([^()]*\|[^()]*)\)/);
+  if(!m) return [s];
+  const out=[];
+  m[1].split("|").forEach(alt=>expand(s.slice(0,m.index)+alt+s.slice(m.index+m[0].length)).forEach(x=>out.push(x)));
+  return out;
+}
+const CONTR = [["won't","will not"],["can't","cannot"],["n't"," not"],["'m"," am"],["'re"," are"],["'s"," is"]];
+function norm(s){
+  s = s.toLowerCase().replace(/[’‘`´]/g,"'").replace(/café/g,"cafe").replace(/mom/g,"mum");
+  s = s.replace(/\b(does|do|did|is|are|was|were|has|have|had|could|should|would)nt\b/g,"$1 not").replace(/\bwont\b/g,"will not").replace(/\bcant\b/g,"cannot").replace(/\bim\b/g,"i am").replace(/\b(he|she)s\b/g,"$1 is").replace(/\b(you|they)re\b/g,"$1 are");
+  s = s.replace(/\b(does|do|did|is|are|was|were|has|have|had|could|should|would)n't\b/g,"$1 not").replace(/\bcan't\b/g,"cannot").replace(/\bwon't\b/g,"will not").replace(/\bcannot\b/g,"can not").replace(/\bcan not\b/g,"cannot");
+  s = s.replace(/\bdoesn't\b/g,"does not").replace(/\bdon't\b/g,"do not").replace(/\bisn't\b/g,"is not").replace(/\baren't\b/g,"are not");
+  s = s.replace(/\b(he|she|it|what|who|that|there)'s\b/g,"$1 is").replace(/\bi'm\b/g,"i am").replace(/\b(you|we|they)'re\b/g,"$1 are");
+  s = s.replace(/'/g,"").replace(/[.,!?;:"“”«»()—–]/g," ").replace(/(\d) (\d)/g,"$1$2").replace(/\s+/g," ").trim();
+  return s;
+}
+function accepted(spec){ // spec: string with " / " alternatives or array
+  const list = Array.isArray(spec)? spec : spec.split(" / ");
+  const out=[]; list.forEach(a=>expand(a).forEach(x=>out.push(x))); return out;
+}
+function first(spec){ return accepted(spec)[0].replace(/\s+/g," ").replace(/ ([.,?!])/g,"$1").trim(); }
+function matches(val,spec){ const v=norm(val); if(!v) return false; return accepted(spec).some(a=>norm(a)===v); }
+// gap text parsing: [[answer::hint]]
+function parseGaps(t){
+  const parts=[]; let last=0; const re=/\[\[(.+?)\]\]/g; let m;
+  while((m=re.exec(t))){ parts.push({txt:t.slice(last,m.index)}); const [ans,hint]=m[1].split("::"); parts.push({ans,hint}); last=re.lastIndex; }
+  parts.push({txt:t.slice(last)}); return parts;
+}
+function parseErr(t){ // returns tokens [{w, wrong?, fix}]
+  return t.split(" ").map(w=>{ const m=w.match(/^\*(.+)\|(.+)\*(.*)$/); return m? {w:m[1]+m[3], err:true, fix:m[2]} : {w}; });
+}
+
+/* ---------- decorations ---------- */
+function sprig(cls=""){
+  let leaves=""; const pts=[[18,58,-40],[30,46,-20],[24,36,-60],[42,32,-10],[36,20,-50],[54,16,5]];
+  pts.forEach(([x,y,r],i)=>{ leaves+=`<path d="M0 0C6-7 16-7 22 0C16 7 6 7 0 0Z" transform="translate(${x} ${y}) rotate(${r})" fill="var(${i%2?"--leaf2":"--leaf1"})"/>`; });
+  return `<svg class="sprig ${cls}" viewBox="0 0 80 72" aria-hidden="true"><path d="M6 70C20 52 38 30 62 14" stroke="var(--stem)" stroke-width="2.4" fill="none" stroke-linecap="round"/>${leaves}</svg>`;
+}
+const tipHTML = p => `<div class="tip"><div class="lab">Запомни!</div><ul>${p.tip.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;
+const profHTML = p => p.profile? `<div class="profile"><div class="ava">${p.profile.name.replace(/'s.*$/,"").split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase()}</div><div><h3>${p.profile.name}</h3><ul>${p.profile.lines.map(l=>`<li>${l}</li>`).join("")}</ul></div></div>`:"";
+const instr = pt => `<div class="plab">${pt.label?`<div class="pl">${pt.label}</div>`:""}<div class="instr"><b>${pt.ru}</b><i>${pt.en}</i></div></div>`;
+
+/* ================= INTERACTIVE ================= */
+function renderInteractive(){
+  const app=$("#app");
+  app.innerHTML = `<header class="hero">${sprig()}<div><h1>${D.title}</h1><div class="sub">${D.subtitle}</div></div>${sprig("r")}</header>
+  <nav class="tabs" aria-label="Страницы">${D.pages.map(p=>`<button type="button" data-p="${p.n}"><span class="num">${p.n}</span><span>${p.title.replace("ОГЭ-формат: ","ОГЭ · ")}</span><span class="sc" id="sc${p.n}"></span></button>`).join("")}</nav>
+  <main id="view"></main><div class="foot">© Чемоданчик учителя английского</div>`;
+  app.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(+b.dataset.p,true));
+  let start=1; const h=(location.hash||"").replace("#p",""); if(+h>=1&&+h<=10) start=+h;
+  show(start,false);
+}
+const state={}; // per page: saved html? keep DOM per page
+const views={};
+function show(n,scroll){
+  const view=$("#view");
+  if(!views[n]) views[n]=buildPage(D.pages[n-1]);
+  view.replaceChildren(views[n]);
+  document.querySelectorAll("nav.tabs button").forEach(b=>b.setAttribute("aria-current",+b.dataset.p===n?"true":"false"));
+  const cur=document.querySelector(`nav.tabs button[data-p="${n}"]`); if(cur) cur.scrollIntoView({block:"nearest",inline:"center"});
+  try{ history.replaceState(null,"","#p"+n);}catch(e){}
+  if(scroll) view.scrollIntoView({block:"start"});
+}
+let uid=0;
+function buildPage(p){
+  const el=document.createElement("section"); el.className="sheet";
+  let h=`<div class="phead"><div class="circle">${p.n}</div><div><h2>${p.title}</h2><div class="ru">${p.ru}</div></div></div>${profHTML(p)}${tipHTML(p)}`;
+  p.parts.forEach((pt,pi)=>{ h+=`<div class="part">${instr(pt)}${partI(pt,p.n,pi)}</div>`; });
+  h+=`<div class="actions"><button class="btn main" data-a="check">Проверить</button><button class="btn" data-a="show">Показать ответы</button><button class="btn" data-a="reset">Начать заново</button><span class="score" aria-live="polite"></span></div>`;
+  el.innerHTML=h;
+  // error-token interactions
+  el.querySelectorAll(".eitem").forEach(li=>{
+    const fix=li.querySelector(".efix"), inp=fix.querySelector("input");
+    li.querySelectorAll(".tok").forEach(t=>t.onclick=()=>{ li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); li.querySelector(".none").classList.remove("on"); t.classList.add("sel"); li.dataset.pick=t.dataset.i; fix.hidden=false; inp.focus(); clearMark(li); });
+    li.querySelector(".none").onclick=(e)=>{ li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); e.currentTarget.classList.add("on"); li.dataset.pick="none"; fix.hidden=true; clearMark(li); };
+  });
+  el.querySelector('[data-a="check"]').onclick=()=>check(el,p,false);
+  el.querySelector('[data-a="show"]').onclick=()=>check(el,p,true);
+  el.querySelector('[data-a="reset"]').onclick=()=>{ delete views[p.n]; $("#sc"+p.n).textContent=""; show(p.n,false); };
+  return el;
+}
+function clearMark(li){ li.classList.remove("ok","bad"); const m=li.querySelector(".model"); if(m) m.remove(); }
+function gapInput(ans){ const w=Math.max(4, Math.max(...accepted(ans).map(a=>a.length))+2); return `<input class="gap" id="g${++uid}" data-ans="${esc(ans)}" style="width:${w}ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="ответ">`; }
+function gapLine(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : gapInput(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function partI(pt){
+  if(pt.type==="gaps"){
+    return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+
+      `<ol class="items ${pt.cols===4?"grid4":""}">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${gapLine(t)}</span></li>`).join("")}</ol>`;
+  }
+  if(pt.type==="full"||pt.type==="translate"){
+    return `<ol class="items">${pt.items.map((it,i)=>`<li class="fitem" data-kind="${pt.type}"><span class="n">${i+1}</span><div class="c"><div>${it.p}${it.cue?` <span class="cue">(${it.cue})</span>`:""}</div><input class="full" id="f${++uid}" data-acc='${esc(JSON.stringify(it.a)).replace(/'/g,"&#39;")}' autocomplete="off" autocapitalize="sentences" spellcheck="false" aria-label="ответ"></div></li>`).join("")}</ol>`;
+  }
+  if(pt.type==="errors"){
+    return `<ol class="items">${pt.items.map((t,i)=>{ const toks=parseErr(t); const ei=toks.findIndex(x=>x.err); const fix=ei>=0?toks[ei].fix:"";
+      return `<li class="eitem" data-err="${ei}" data-fix="${esc(fix)}"><span class="n">${i+1}</span><div class="c"><div>${toks.map((x,j)=>`<button type="button" class="tok" data-i="${j}">${esc(x.w)}</button>`).join(" ")}</div><div class="erow"><button type="button" class="small none">Ошибки нет</button><span class="efix" hidden>→ <input class="gap" id="e${++uid}" style="width:12ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="исправление"></span></div></div></li>`; }).join("")}</ol>`;
+  }
+  if(pt.type==="scale"){
+    const opts=`<option value="">—</option>`+pt.words.map(w=>`<option>${w}</option>`).join("");
+    return `<div class="bar"></div><div class="scale">${pt.marks.map((m,i)=>`<div class="slot"><span class="pct">${m}</span><select id="s${++uid}" data-ans="${pt.words[i]}" aria-label="${m}">${opts}</select></div>`).join("")}</div>`;
+  }
+  if(pt.type==="oge"){
+    return `<div class="oge">${pt.items.map((it,i)=>`<div class="row"><span>${gapLine(it.t)}</span><span class="w">${it.w}</span></div>`).join("")}</div>`;
+  }
+  if(pt.type==="survey"){
+    return `<ul class="survey">${pt.items.map(x=>`<li>How often do you ${x.replace("…","")}</li>`).join("")}</ul><p class="hint" style="white-space:normal">Это задание для работы в паре, оно не проверяется автоматически.</p>`;
+  }
+  return "";
+}
+function check(el,p,reveal){
+  let ok=0,total=0;
+  el.querySelectorAll("input.gap[data-ans], select[data-ans]").forEach(inp=>{
+    total++; if(reveal){ inp.value = inp.tagName==="SELECT"? inp.dataset.ans : first(inp.dataset.ans); }
+    const good = inp.tagName==="SELECT"? inp.value===inp.dataset.ans : matches(inp.value,inp.dataset.ans);
+    inp.classList.toggle("ok",good); inp.classList.toggle("bad",!good && inp.value.trim()!=="" ); if(good) ok++;
+  });
+  el.querySelectorAll(".fitem").forEach(li=>{
+    total++; const inp=li.querySelector("input"); const acc=JSON.parse(inp.dataset.acc); const model=first(acc[0]);
+    const old=li.querySelector(".model"); if(old) old.remove();
+    if(reveal) inp.value=model;
+    const good=matches(inp.value,acc);
+    inp.classList.remove("ok","bad","soft");
+    if(good){ inp.classList.add("ok"); ok++; }
+    else if(inp.value.trim()){
+      const soft = li.dataset.kind==="translate";
+      inp.classList.add(soft?"soft":"bad");
+      const m=document.createElement("div"); m.className="model"; m.textContent=(soft?"Сравните с образцом: ":"Правильно: ")+model; inp.after(m);
+    }
+  });
+  el.querySelectorAll(".eitem").forEach(li=>{
+    total++; const err=+li.dataset.err, fix=li.dataset.fix, inp=li.querySelector(".efix input");
+    if(reveal){
+      li.querySelectorAll(".tok").forEach(x=>x.classList.remove("sel")); li.querySelector(".none").classList.remove("on");
+      if(err<0){ li.dataset.pick="none"; li.querySelector(".none").classList.add("on"); li.querySelector(".efix").hidden=true; }
+      else { li.dataset.pick=String(err); li.querySelector(`.tok[data-i="${err}"]`).classList.add("sel"); li.querySelector(".efix").hidden=false; inp.value= fix==="—"?"— (убрать слово)":fix; }
+    }
+    const pick=li.dataset.pick; let good=false;
+    if(pick===undefined){ li.classList.remove("ok","bad"); return; }
+    if(err<0) good = pick==="none";
+    else if(pick===String(err)){ const v=inp.value.trim(); good = fix==="—"? (/^(|убрать.*|удалить.*|delete|remove|нет|ничего)$/i.test(v.replace(/[—–\-()]/g,"").trim())) : matches(v,fix); }
+    const n=li.querySelector(".n"); n.classList.toggle("ok",good); n.classList.toggle("bad",!good);
+    inp.classList.toggle("ok",good && err>=0); inp.classList.toggle("bad",!good && pick!=="none");
+    if(good) ok++;
+  });
+  const s=el.querySelector(".score"); s.textContent = reveal? "Ответы показаны" : `${ok} / ${total}`;
+  if(!reveal) $("#sc"+p.n).textContent=`${ok}/${total}`;
+}
+
+/* ================= PRINT ================= */
+function bl(ans,extra=0){ const L=Math.max(...accepted(ans).map(a=>a.length)); return `<span class="blank" style="width:${Math.max(4,L*0.62+1.6+extra)}em"></span>`; }
+function gapP(t){ return parseGaps(t).map(x=>x.txt!==undefined? x.txt : bl(x.ans)+(x.hint?` <span class="hint">(${x.hint})</span>`:"")).join(""); }
+function partP(pt){
+  if(pt.type==="gaps") return (pt.bank?`<div class="bank">${pt.bank.map(w=>`<span>${w}</span>`).join("")}</div>`:"")+`<ol class="items ${pt.cols===4?"grid4":""}">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${gapP(t)}</span></li>`).join("")}</ol>`;
+  if(pt.type==="full"||pt.type==="translate") return `<ol class="items fl">${pt.items.map((it,i)=>{ const L=first(it.a[0]).length; const lines=L>52?2:1;
+     const plen=(it.p+(it.cue||"")).replace(/<[^>]+>/g,"").length; const row=plen<=50;
+     return `<li class="${row?"rowl":""}"><span class="n">${i+1}</span><div class="c"><div class="pp">${it.p}${it.cue?` <span class="cue">(${it.cue})</span>`:""}</div><div class="ll">${'<div class="wline"></div>'.repeat(lines)}</div></div></li>`; }).join("")}</ol>`;
+  if(pt.type==="errors") return `<ol class="items">${pt.items.map((t,i)=>`<li><span class="n">${i+1}</span><span class="c">${esc(parseErr(t).map(x=>x.w).join(" "))}</span><span class="blank" style="width:7.5em;flex:none"></span></li>`).join("")}</ol>`;
+  if(pt.type==="scale"){ const sh=[...pt.words].sort(); return `<div class="bank">${sh.map(w=>`<span>${w}</span>`).join("")}</div><div class="scale">${pt.marks.map(m=>`<div class="slot"><span class="pct">${m}</span><div class="box"></div></div>`).join("")}</div>`; }
+  if(pt.type==="oge") return `<div class="oge">${pt.items.map((it,i)=>`<div class="row"><span>${gapP(it.t)}</span><span class="w">${it.w}</span></div>`).join("")}</div>`;
+  if(pt.type==="survey") return `<table class="sv"><tr><th>How often do you…</th>${pt.items.slice(0,3).map(x=>`<td>${x}</td>`).join("")}</tr><tr><th>How often do you…</th>${pt.items.slice(3).map(x=>`<td>${x}</td>`).join("")}</tr></table>`;
+  return "";
+}
+function keyFor(pt){
+  if(pt.type==="gaps") return pt.items.map(t=>parseGaps(t).filter(x=>x.ans).map(x=>first(x.ans)).join(" … "));
+  if(pt.type==="oge") return pt.items.map(it=>parseGaps(it.t).filter(x=>x.ans).map(x=>first(x.ans)).join(" … "));
+  if(pt.type==="full"||pt.type==="translate") return pt.items.map(it=>first(it.a[0]));
+  if(pt.type==="errors") return pt.items.map(t=>{ const x=parseErr(t).find(z=>z.err); return x? (x.fix==="—"? `убрать <i>${x.w}</i>: I never eat fast food.` : `${x.w} → <b>${x.fix}</b>`) : "✓ ошибки нет"; });
+  if(pt.type==="scale") return [pt.words.join(" → ")];
+  return null;
+}
+function renderPrint(){
+  document.body.classList.add("print");
+  let h="";
+  D.pages.forEach(p=>{
+    h+=`<section class="ps"><div class="top"><span><b>${D.title}</b> · ${p.n} / ${D.pages.length}</span><span>Name ________________________ &nbsp; Date __________</span></div>${sprig()}
+    <div class="phead"><div class="circle">${p.n}</div><div><h2>${p.title}</h2><div class="ru">${p.ru}</div></div></div>${profHTML(p)}${tipHTML(p)}`;
+    p.parts.forEach(pt=>{ h+=`<div class="part">${instr(pt)}${partP(pt)}</div>`; });
+    h+=`<div class="pfoot"><span>© Чемоданчик учителя английского</span><span>${p.n}</span></div></section>`;
+  });
+  // keys
+  let k=""; D.pages.forEach(p=>{ k+=`<div class="kp"><h4>${p.n}. ${p.title}</h4>`; p.parts.forEach(pt=>{ const ks=keyFor(pt); if(!ks) return; k+=(pt.label?`<div class="kl">${pt.label}</div>`:"")+(pt.type==="scale"?`<div>${ks[0]}</div>`:`<ol>${ks.map(x=>`<li>${x}</li>`).join("")}</ol>`); }); k+=`</div>`; });
+  h+=`<section class="ps"><div class="top"><span><b>${D.title}</b> · Ключи</span><span>для учителя</span></div><div class="phead"><div class="circle">✓</div><div><h2>Answer Key</h2><div class="ru">Ключи ко всем страницам. В заданиях на перевод возможны и другие верные варианты.</div></div></div><div class="keys" style="margin-top:4mm">${k}</div><div class="pfoot"><span>© Чемоданчик учителя английского</span><span></span></div></section>`;
+  $("#app").innerHTML=h;
+}
+PRINT? renderPrint() : renderInteractive();
+window.__PS = {expand,norm,accepted,matches,first,parseGaps,parseErr};
+})();
+</script>
+</html>
